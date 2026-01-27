@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DiPeppo Events - Foodtrucks italiens et bretons, jeux de loisirs pour vos événements. Location de foodtrucks gelato, focaccia, crêpes et animations fléchettes, babyfoot, flippers.">
+    <meta name="keywords" content="foodtruck événementiel, location foodtruck, gelato italien, focaccia, crêpes bretonnes, jeux événementiels, fléchettes, babyfoot, flipper, animation événement">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dipeppo-events.fr">
+    <meta property="og:title" content="DiPeppo Events - Foodtrucks & Jeux pour Vos Événements">
+    <meta property="og:description" content="Saveurs italiennes et bretonnes, animations ludiques pour des événements inoubliables.">
+    <meta property="og:image" content="https://dipeppo-events.fr/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://dipeppo-events.fr">
+    <meta property="twitter:title" content="DiPeppo Events - Foodtrucks & Jeux pour Vos Événements">
+    <meta property="twitter:description" content="Saveurs italiennes et bretonnes, animations ludiques pour des événements inoubliables.">
+    <meta property="twitter:image" content="https://dipeppo-events.fr/og-image.jpg">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "DiPeppo Events",
+        "description": "Location de foodtrucks italiens et bretons et jeux de loisirs pour événements professionnels et privés",
+        "url": "https://dipeppo-events.fr",
+        "telephone": "+33-2-XX-XX-XX-XX",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "FR",
+            "addressRegion": "Bretagne"
+        },
+        "servesCuisine": ["Italian", "French"],
+        "sameAs": [
+            "https://www.instagram.com/dipeppo",
+            "https://www.facebook.com/dipeppo"
+        ]
+    }
+    </script>
+
+    <title>DiPeppo Events - Foodtrucks & Jeux pour Vos Événements</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --noir: #1A0F0A;
+            --blanc: #FFF9F5;
+            --rouge: #C73E1D;
+            --beige: #F5E6D3;
+            --marron: #5C3D2E;
+            --accent: #D89B6A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--blanc);
+            color: var(--noir);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* === NAVIGATION === */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 2rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(250, 250, 248, 0.95) 0%, rgba(250, 250, 248, 0) 100%);
+            backdrop-filter: blur(10px);
+            animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--marron);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo span {
+            color: var(--rouge);
+            font-style: italic;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--noir);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            position: relative;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--rouge);
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FFF9F5 0%, #F5E6D3 100%);
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                repeating-linear-gradient(45deg, var(--noir) 0, var(--noir) 1px, transparent 0, transparent 50%),
+                repeating-linear-gradient(-45deg, var(--noir) 0, var(--noir) 1px, transparent 0, transparent 50%);
+            background-size: 40px 40px;
+            animation: patternMove 60s linear infinite;
+        }
+
+        @keyframes patternMove {
+            0% {
+                transform: translate(0, 0);
+            }
+            100% {
+                transform: translate(40px, 40px);
+            }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 10;
+            padding: 0 2rem;
+            max-width: 1200px;
+        }
+
+        .hero-subtitle {
+            font-size: 0.95rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+        }
+
+        .hero h1 strong {
+            font-weight: 600;
+            font-style: italic;
+            display: block;
+            background: linear-gradient(135deg, var(--rouge) 0%, var(--marron) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--marron);
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--noir);
+            color: var(--blanc);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 2px solid var(--noir);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--rouge);
+            transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+
+        .cta-button:hover {
+            color: var(--blanc);
+            border-color: var(--rouge);
+        }
+
+        .cta-button:hover::before {
+            left: 0;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: fadeIn 1s ease 1.5s forwards, bounce 2s ease-in-out 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(10px);
+            }
+        }
+
+        .scroll-indicator::after {
+            content: '';
+            display: block;
+            width: 2px;
+            height: 50px;
+            background: linear-gradient(180deg, var(--accent) 0%, transparent 100%);
+            margin: 0 auto;
+        }
+
+        /* === SERVICES SECTION === */
+        .services {
+            padding: 8rem 4rem;
+            background: var(--blanc);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        .section-label {
+            font-size: 0.85rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--rouge);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 400;
+            line-height: 1.2;
+            color: var(--noir);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            padding: 3rem;
+            background: var(--blanc);
+            border: 1px solid var(--beige);
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(199, 62, 29, 0.05) 0%, rgba(92, 61, 46, 0.05) 100%);
+            transition: left 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--rouge);
+            box-shadow: 0 20px 60px rgba(199, 62, 29, 0.15);
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 300;
+            color: var(--beige);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .service-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--noir);
+            position: relative;
+        }
+
+        .service-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            color: var(--noir);
+            position: relative;
+        }
+
+        .service-card p {
+            color: var(--marron);
+            line-height: 1.8;
+            position: relative;
+        }
+
+        /* === PICTOGRAMMES === */
+        .service-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(199, 62, 29, 0.08) 0%, rgba(245, 230, 211, 0.15) 100%);
+            border-radius: 20px;
+            padding: 1rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-icon svg {
+            width: 100%;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-card:hover .service-icon {
+            transform: translateY(-5px);
+            background: linear-gradient(135deg, rgba(199, 62, 29, 0.15) 0%, rgba(245, 230, 211, 0.25) 100%);
+        }
+
+        .service-card:hover .service-icon svg {
+            transform: scale(1.1);
+        }
+
+        /* === STATS SECTION === */
+        .stats {
+            padding: 8rem 4rem;
+            background: var(--noir);
+            color: var(--blanc);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(199, 62, 29, 0.15) 0%, transparent 50%);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 300;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--blanc) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--beige);
+        }
+
+        /* === PROCESS SECTION === */
+        .process {
+            padding: 8rem 4rem;
+            background: var(--beige);
+        }
+
+        .process-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--rouge) 0%, var(--marron) 100%);
+        }
+
+        .process-step {
+            padding-left: 6rem;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            left: 1.25rem;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background: var(--rouge);
+            box-shadow: 0 0 0 8px var(--beige), 0 0 0 10px var(--rouge);
+        }
+
+        .process-step h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+            color: var(--noir);
+        }
+
+        .process-step p {
+            color: var(--marron);
+            line-height: 1.8;
+        }
+
+        /* === CTA SECTION === */
+        .cta-section {
+            padding: 10rem 4rem;
+            background: var(--noir);
+            color: var(--blanc);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(199, 62, 29, 0.2) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 10;
+        }
+
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--beige);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button-light {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--blanc);
+            color: var(--noir);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 2px solid var(--blanc);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button-light::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--rouge);
+            transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: -1;
+        }
+
+        .cta-button-light:hover {
+            color: var(--blanc);
+            border-color: var(--rouge);
+        }
+
+        .cta-button-light:hover::before {
+            left: 0;
+        }
+
+        /* === FOOTER === */
+        footer {
+            padding: 4rem 4rem 2rem;
+            background: var(--noir);
+            color: var(--beige);
+            border-top: 1px solid rgba(245, 230, 211, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-about h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--blanc);
+            margin-bottom: 1rem;
+        }
+
+        .footer-about p {
+            line-height: 1.8;
+            color: var(--accent);
+        }
+
+        .footer-links h4 {
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--rouge);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--beige);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--rouge);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(245, 230, 211, 0.1);
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1.5rem 2rem;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .logo {
+                text-align: center;
+            }
+
+            .hero, .services, .stats, .process, .cta-section {
+                padding: 4rem 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .process-timeline::before {
+                left: 1rem;
+            }
+
+            .process-step {
+                padding-left: 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* === SCROLL ANIMATIONS === */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* === GOURMANDISES SECTION === */
+        .gourmandises {
+            padding: 8rem 4rem;
+            background: var(--blanc);
+        }
+
+        .gourmandises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gourmandise-category {
+            padding: 2.5rem 2rem;
+            background: var(--blanc);
+            border: 2px solid var(--beige);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-align: center;
+        }
+
+        .gourmandise-category:hover {
+            border-color: var(--rouge);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(199, 62, 29, 0.1);
+        }
+
+        .gourmandise-category h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--marron);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .gourmandise-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gourmandise-category li {
+            font-size: 0.95rem;
+            color: var(--marron);
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+
+        /* === PRODUCTEURS SECTION === */
+        .producteurs {
+            padding: 8rem 4rem;
+            background: var(--beige);
+        }
+
+        .producteurs-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .producteurs-box {
+            background: var(--blanc);
+            padding: 3rem;
+            border-radius: 8px;
+            border: 2px solid rgba(199, 62, 29, 0.1);
+        }
+
+        .producteurs-box h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--marron);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .producteurs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .producteurs-list p {
+            font-size: 1.1rem;
+            color: var(--marron);
+            text-align: center;
+            padding: 0.8rem;
+            background: var(--beige);
+            border-radius: 4px;
+        }
+
+        .produits-artisanaux-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .produits-artisanaux-list p {
+            font-size: 1rem;
+            color: var(--marron);
+            text-align: center;
+            padding: 1rem;
+            background: var(--beige);
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+
+        /* === EXPERIENCE SECTION === */
+        .experience {
+            padding: 8rem 4rem;
+            background: var(--blanc);
+        }
+
+        .experience-list {
+            max-width: 900px;
+            margin: 3rem auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .experience-item {
+            font-size: 1.1rem;
+            color: var(--marron);
+            padding: 1.2rem 2rem;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--blanc) 100%);
+            border-left: 4px solid var(--rouge);
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
+            border-left-color: var(--marron);
+        }
+
+        .experience-gallery {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            height: 200px;
+        }
+
+        .experience-gallery-item {
+            background: var(--beige);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .experience-gallery-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(199, 62, 29, 0.3), rgba(92, 61, 46, 0.3));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .experience-gallery-item:hover::after {
+            opacity: 1;
+        }
+
+        /* === CONTACT FORM === */
+        .contact-form-section {
+            padding: 8rem 4rem;
+            background: var(--beige);
+            position: relative;
+        }
+
+        .contact-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            position: sticky;
+            top: 2rem;
+        }
+
+        .contact-info h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--marron);
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-detail-item svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--rouge);
+            flex-shrink: 0;
+        }
+
+        .contact-detail-item p {
+            font-size: 1rem;
+            color: var(--marron);
+            margin: 0;
+        }
+
+        .contact-form {
+            background: var(--blanc);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-form h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--marron);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--marron);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group label span {
+            color: var(--rouge);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.9rem 1rem;
+            border: 2px solid var(--beige);
+            background: var(--blanc);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            color: var(--marron);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--rouge);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--marron);
+            color: var(--blanc);
+            border: none;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .form-submit:hover {
+            background: var(--rouge);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(199, 62, 29, 0.3);
+        }
+
+        /* === RESPONSIVE UPDATES === */
+        @media (max-width: 768px) {
+            .gourmandises-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .producteurs-content,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-info {
+                position: relative;
+                top: 0;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .produits-artisanaux-list {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-gallery {
+                grid-template-columns: repeat(2, 1fr);
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Di<span>Peppo</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="#foodtrucks">Foodtrucks / Trailers</a></li>
+            <li><a href="#foodtrucks">Matériels / Prestations</a></li>
+            <li><a href="#jeux">Jeux / Décorations</a></li>
+            <li><a href="#catalogue">Catalogue</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="hero-subtitle">Foodtrucks & Animations</div>
+            <h1>
+                L'Art Italien & Breton <strong>au service de vos événements</strong>
+            </h1>
+            <p class="hero-description">
+                Gelato artisanal, focaccia authentique, crêpes bretonnes et animations ludiques. 
+                Une expérience gourmande et conviviale qui sublime chaque moment.
+            </p>
+            <a href="#contact" class="cta-button">Réserver Maintenant</a>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Gourmandises Section -->
+    <section class="gourmandises">
+        <div class="section-header fade-in">
+            <div class="section-label">Nos Gourmandises</div>
+            <h2 class="section-title">Une palette de saveurs authentiques</h2>
+        </div>
+        <div class="gourmandises-grid">
+            <div class="gourmandise-category fade-in">
+                <h3>Produits Gelato</h3>
+                <ul>
+                    <li>Glaces Italiennes</li>
+                    <li>Gelato Fresco</li>
+                    <li>Glaces Sundae</li>
+                    <li>Bubble Tea</li>
+                    <li>Granitas Fruits/Alcool</li>
+                </ul>
+            </div>
+            <div class="gourmandise-category fade-in">
+                <h3>Produits Sucrés</h3>
+                <ul>
+                    <li>Crêpes</li>
+                    <li>Gaufres</li>
+                    <li>Churros</li>
+                    <li>Panitos Sucrés</li>
+                    <li>Cookies</li>
+                </ul>
+            </div>
+            <div class="gourmandise-category fade-in">
+                <h3>Produits Salés</h3>
+                <ul>
+                    <li>Focaccia</li>
+                    <li>Galettes</li>
+                    <li>Kebabs Bretons</li>
+                    <li>Churros</li>
+                    <li>Panitos Salés</li>
+                </ul>
+            </div>
+            <div class="gourmandise-category fade-in">
+                <h3>Produits Décorations</h3>
+                <ul>
+                    <li>Buggy Déco</li>
+                    <li>Moto Déco</li>
+                    <li>Vélo Déco</li>
+                    <li>Scooter Déco</li>
+                    <li>PLV Décorations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Producteurs & Produits Artisanaux Section -->
+    <section class="producteurs">
+        <div class="section-header fade-in">
+            <div class="section-label">Qualité & Authenticité</div>
+            <h2 class="section-title">Nos partenaires locaux</h2>
+        </div>
+        <div class="producteurs-content">
+            <div class="producteurs-box fade-in">
+                <h3>Nos Producteurs</h3>
+                <div class="producteurs-list">
+                    <p>LBP Fraise Plougastel</p>
+                    <p>Oignons de Roscoff</p>
+                    <p>Lait Ferme Monfort</p>
+                </div>
+            </div>
+            <div class="producteurs-box fade-in">
+                <h3>Nos Produits Artisanaux</h3>
+                <div class="produits-artisanaux-list">
+                    <p>Confitures</p>
+                    <p>Caramels</p>
+                    <p>Chocolats</p>
+                    <p>Pâte de Fruits</p>
+                    <p>Miels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Foodtrucks Section -->
+    <section id="foodtrucks" class="services">
+        <div class="section-header fade-in">
+            <div class="section-label">Nos Foodtrucks</div>
+            <h2 class="section-title">Saveurs authentiques & artisanales</h2>
+        </div>
+
+        <!-- Foodtruck Italien -->
+        <div style="max-width: 1400px; margin: 0 auto 6rem;">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 500; text-align: center; color: var(--marron); margin-bottom: 3rem; text-decoration: underline; text-decoration-color: var(--rouge); text-decoration-thickness: 3px; text-underline-offset: 8px;">Foodtruck Italien</h3>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cornet -->
+                            <path d="M 35 65 L 50 95 L 65 65 Z" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <path d="M 38 65 L 62 65" stroke="#C9935A" stroke-width="1"/>
+                            <path d="M 40 72 L 60 72" stroke="#C9935A" stroke-width="1"/>
+                            <path d="M 42 79 L 58 79" stroke="#C9935A" stroke-width="1"/>
+                            <path d="M 44 86 L 56 86" stroke="#C9935A" stroke-width="1"/>
+                            <!-- Boule rose -->
+                            <ellipse cx="50" cy="55" rx="18" ry="16" fill="#FFB6C1" stroke="#FF8FAB" stroke-width="1.5"/>
+                            <ellipse cx="45" cy="52" rx="4" ry="3" fill="#FFD4DC" opacity="0.6"/>
+                            <!-- Boule jaune -->
+                            <ellipse cx="50" cy="38" rx="16" ry="14" fill="#FFE680" stroke="#FFD54F" stroke-width="1.5"/>
+                            <ellipse cx="46" cy="36" rx="3" ry="2.5" fill="#FFF9C4" opacity="0.7"/>
+                            <!-- Boule rouge -->
+                            <ellipse cx="50" cy="23" rx="14" ry="12" fill="#FF6B6B" stroke="#E63946" stroke-width="1.5"/>
+                            <ellipse cx="47" cy="21" rx="3" ry="2" fill="#FF9999" opacity="0.6"/>
+                            <!-- Cerise -->
+                            <circle cx="50" cy="10" r="3" fill="#C73E1D"/>
+                            <path d="M 50 10 Q 52 8 54 6" stroke="#8B4513" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Gelato</h4>
+                    <p>
+                        Glaces artisanales italiennes aux saveurs authentiques. Fabrication sur place avec 
+                        des ingrédients de qualité pour une expérience gustative inoubliable.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Pain focaccia -->
+                            <ellipse cx="50" cy="55" rx="32" ry="20" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="50" rx="32" ry="18" fill="#F5D7A1" stroke="#C9935A" stroke-width="1.5"/>
+                            <!-- Détails trous -->
+                            <circle cx="40" cy="48" r="2" fill="#C9935A"/>
+                            <circle cx="50" cy="52" r="2" fill="#C9935A"/>
+                            <circle cx="60" cy="47" r="2" fill="#C9935A"/>
+                            <circle cx="45" cy="55" r="1.5" fill="#C9935A"/>
+                            <circle cx="55" cy="54" r="1.5" fill="#C9935A"/>
+                            <!-- Herbes -->
+                            <path d="M 42 45 L 43 42" stroke="#6B8E23" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M 58 46 L 59 43" stroke="#6B8E23" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M 48 50 L 49 47" stroke="#6B8E23" stroke-width="1.5" stroke-linecap="round"/>
+                            <!-- Vapeur -->
+                            <path d="M 35 38 Q 32 32 35 28" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+                            <path d="M 50 35 Q 47 29 50 25" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+                            <path d="M 65 38 Q 62 32 65 28" stroke="#D4AF37" stroke-width="1.5" fill="none" opacity="0.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Focaccia</h4>
+                    <p>
+                        Spécialités italiennes préparées minute. Focaccia moelleuse et panini grillés 
+                        pour régaler vos invités lors de salons professionnels ou festivals.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Verre -->
+                            <path d="M 32 40 L 35 75 Q 35 82 50 82 Q 65 82 65 75 L 68 40 Z" fill="#87CEEB" stroke="#5DADE2" stroke-width="1.5" opacity="0.3"/>
+                            <path d="M 32 40 L 35 70 Q 35 77 50 77 Q 65 77 65 70 L 68 40 Z" fill="#4FC3F7" stroke="#29B6F6" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="40" rx="18" ry="6" fill="#81D4FA" stroke="#29B6F6" stroke-width="1.5"/>
+                            <!-- Glace pilée -->
+                            <ellipse cx="50" cy="35" rx="16" ry="8" fill="#FFFFFF" opacity="0.8"/>
+                            <circle cx="45" cy="33" r="2" fill="#E8F5E9" opacity="0.9"/>
+                            <circle cx="55" cy="34" r="2" fill="#E8F5E9" opacity="0.9"/>
+                            <circle cx="50" cy="30" r="2.5" fill="#FFFFFF" opacity="0.9"/>
+                            <!-- Paille -->
+                            <rect x="60" y="15" width="3" height="35" fill="#E63946" stroke="#C73E1D" stroke-width="0.5" rx="1.5"/>
+                            <path d="M 60 15 L 55 10 L 58 10 L 63 15 Z" fill="#E63946" stroke="#C73E1D" stroke-width="0.5"/>
+                            <!-- Citron -->
+                            <ellipse cx="42" cy="40" rx="4" ry="3" fill="#FFE680" stroke="#FFD54F" stroke-width="1"/>
+                            <path d="M 40 40 L 44 40" stroke="#FFD54F" stroke-width="0.5"/>
+                        </svg>
+                    </div>
+                    <h4>Granitas</h4>
+                    <p>
+                        Granitas rafraîchissantes aux fruits ou avec alcool. La boisson glacée sicilienne 
+                        parfaite pour les événements estivaux et les chaudes journées.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Pain du haut -->
+                            <ellipse cx="50" cy="38" rx="24" ry="10" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="35" rx="24" ry="8" fill="#F5D7A1" stroke="#C9935A" stroke-width="1"/>
+                            <circle cx="45" cy="33" r="1.5" fill="#D4AF37" opacity="0.6"/>
+                            <circle cx="55" cy="34" r="1.5" fill="#D4AF37" opacity="0.6"/>
+                            <!-- Salade -->
+                            <path d="M 28 45 Q 30 42 35 43 Q 40 44 45 42 Q 50 41 55 42 Q 60 43 65 42 Q 70 41 72 44" fill="#7CB342" stroke="#558B2F" stroke-width="1"/>
+                            <!-- Tomate -->
+                            <ellipse cx="38" cy="50" rx="8" ry="3" fill="#E63946" stroke="#C73E1D" stroke-width="1"/>
+                            <ellipse cx="55" cy="51" rx="8" ry="3" fill="#E63946" stroke="#C73E1D" stroke-width="1"/>
+                            <!-- Fromage -->
+                            <rect x="30" y="54" width="40" height="4" fill="#FFD54F" stroke="#FFC107" stroke-width="1" rx="1"/>
+                            <!-- Jambon -->
+                            <ellipse cx="50" cy="62" rx="22" ry="5" fill="#FFB6C1" stroke="#FF8FAB" stroke-width="1"/>
+                            <!-- Pain du bas -->
+                            <ellipse cx="50" cy="70" rx="25" ry="10" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="67" rx="25" ry="8" fill="#F5D7A1" stroke="#C9935A" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <h4>Panito</h4>
+                    <p>
+                        Petits pains italiens garnis, version miniature du panini. Idéal pour les cocktails 
+                        et événements où vos invités souhaitent déguster en toute simplicité.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Soucoupe -->
+                            <ellipse cx="50" cy="75" rx="28" ry="8" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <!-- Tasse -->
+                            <path d="M 30 70 L 32 45 Q 32 40 37 40 L 63 40 Q 68 40 68 45 L 70 70 Z" fill="#FFFFFF" stroke="#D4D4D4" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="40" rx="16" ry="5" fill="#F5F5F5" stroke="#D4D4D4" stroke-width="1.5"/>
+                            <!-- Café -->
+                            <ellipse cx="50" cy="42" rx="15" ry="4" fill="#6B4423"/>
+                            <path d="M 35 42 L 37 62 Q 37 66 50 66 Q 63 66 63 62 L 65 42" fill="#8B5A3C" opacity="0.8"/>
+                            <!-- Anse -->
+                            <path d="M 70 48 Q 78 48 78 56 Q 78 64 70 64" stroke="#D4D4D4" stroke-width="2" fill="none"/>
+                            <!-- Vapeur -->
+                            <path d="M 42 30 Q 40 24 42 20" stroke="#A8A8A8" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+                            <path d="M 50 28 Q 48 22 50 18" stroke="#A8A8A8" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+                            <path d="M 58 30 Q 56 24 58 20" stroke="#A8A8A8" stroke-width="1.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Caffè</h4>
+                    <p>
+                        Café italien authentique, expresso corsé et onctueux. Pour accompagner vos pauses 
+                        gourmandes et offrir une vraie expérience à l'italienne.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cookie -->
+                            <circle cx="50" cy="50" r="30" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <circle cx="50" cy="50" r="28" fill="#F5D7A1"/>
+                            <!-- Bord craquelé -->
+                            <path d="M 25 40 Q 22 40 20 38" stroke="#C9935A" stroke-width="1" fill="none"/>
+                            <path d="M 30 25 Q 28 22 30 20" stroke="#C9935A" stroke-width="1" fill="none"/>
+                            <path d="M 75 55 Q 78 55 80 57" stroke="#C9935A" stroke-width="1" fill="none"/>
+                            <path d="M 70 75 Q 72 78 70 80" stroke="#C9935A" stroke-width="1" fill="none"/>
+                            <!-- Pépites de chocolat -->
+                            <circle cx="42" cy="45" r="3.5" fill="#6B4423"/>
+                            <circle cx="58" cy="42" r="3" fill="#6B4423"/>
+                            <circle cx="50" cy="55" r="4" fill="#6B4423"/>
+                            <circle cx="38" cy="58" r="2.5" fill="#6B4423"/>
+                            <circle cx="60" cy="58" r="3" fill="#6B4423"/>
+                            <circle cx="48" cy="38" r="2.5" fill="#6B4423"/>
+                            <circle cx="55" cy="68" r="2.5" fill="#6B4423"/>
+                            <circle cx="65" cy="50" r="3" fill="#6B4423"/>
+                            <!-- Reflets sur pépites -->
+                            <circle cx="43" cy="44" r="1" fill="#8B5A3C" opacity="0.7"/>
+                            <circle cx="59" cy="41" r="0.8" fill="#8B5A3C" opacity="0.7"/>
+                            <circle cx="51" cy="54" r="1.2" fill="#8B5A3C" opacity="0.7"/>
+                        </svg>
+                    </div>
+                    <h4>Cookie</h4>
+                    <p>
+                        Cookies artisanaux aux pépites de chocolat, cuits à la perfection. Douceur réconfortante 
+                        pour compléter votre pause café ou clôturer un repas gourmand.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Foodtruck Breton -->
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; font-weight: 500; text-align: center; color: var(--marron); margin-bottom: 3rem; text-decoration: underline; text-decoration-color: var(--rouge); text-decoration-thickness: 3px; text-underline-offset: 8px;">Foodtruck Breton</h3>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Coupe -->
+                            <ellipse cx="50" cy="75" rx="22" ry="8" fill="#FFB6C1" stroke="#FF8FAB" stroke-width="1.5"/>
+                            <path d="M 28 75 L 30 55 Q 30 50 50 50 Q 70 50 70 55 L 72 75" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1.5"/>
+                            <!-- Sundae -->
+                            <ellipse cx="50" cy="45" rx="18" ry="12" fill="#FFE680" stroke="#FFD54F" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="32" rx="16" ry="10" fill="#FFB6C1" stroke="#FF8FAB" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="22" rx="12" ry="8" fill="#FF6B6B" stroke="#E63946" stroke-width="1.5"/>
+                            <!-- Chantilly -->
+                            <circle cx="45" cy="12" r="4" fill="#FFFFFF" stroke="#F0F0F0" stroke-width="1"/>
+                            <circle cx="52" cy="10" r="4.5" fill="#FFFFFF" stroke="#F0F0F0" stroke-width="1"/>
+                            <circle cx="50" cy="16" r="3.5" fill="#FFFFFF" stroke="#F0F0F0" stroke-width="1"/>
+                            <!-- Cerise -->
+                            <circle cx="50" cy="6" r="3" fill="#C73E1D"/>
+                            <path d="M 50 6 Q 52 4 54 2" stroke="#8B4513" stroke-width="1.5" fill="none"/>
+                        </svg>
+                    </div>
+                    <h4>Sundae</h4>
+                    <p>
+                        Glaces sundae gourmandes garnies de fruits frais, chantilly et sauces maison. 
+                        Le dessert glacé qui ravit petits et grands lors de vos événements.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Pain du haut -->
+                            <ellipse cx="50" cy="32" rx="26" ry="12" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="28" rx="26" ry="10" fill="#F5D7A1" stroke="#C9935A" stroke-width="1"/>
+                            <circle cx="45" cy="26" r="1.5" fill="#D4AF37"/>
+                            <circle cx="55" cy="27" r="1.5" fill="#D4AF37"/>
+                            <!-- Salade -->
+                            <path d="M 26 40 Q 30 38 38 38 Q 46 39 54 38 Q 62 38 70 39 Q 74 40 74 42" fill="#7CB342" stroke="#558B2F" stroke-width="1"/>
+                            <!-- Steak -->
+                            <ellipse cx="50" cy="50" rx="24" ry="8" fill="#8B4513" stroke="#6B3410" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="47" rx="24" ry="6" fill="#A0522D" stroke="#8B4513" stroke-width="1"/>
+                            <!-- Fromage -->
+                            <rect x="28" y="56" width="44" height="5" fill="#FFD54F" stroke="#FFC107" stroke-width="1" rx="2"/>
+                            <!-- Tomate -->
+                            <ellipse cx="40" cy="64" rx="9" ry="3" fill="#E63946" stroke="#C73E1D" stroke-width="1"/>
+                            <ellipse cx="58" cy="65" rx="9" ry="3" fill="#E63946" stroke="#C73E1D" stroke-width="1"/>
+                            <!-- Pain du bas -->
+                            <ellipse cx="50" cy="75" rx="28" ry="12" fill="#E8B17E" stroke="#C9935A" stroke-width="1.5"/>
+                            <ellipse cx="50" cy="72" rx="28" ry="10" fill="#F5D7A1" stroke="#C9935A" stroke-width="1"/>
+                        </svg>
+                    </div>
+                    <h4>Burgers</h4>
+                    <p>
+                        Burgers gourmands préparés avec des produits frais et locaux. Pain brioché, 
+                        steaks de qualité et garnitures généreuses pour satisfaire tous les appétits.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Crêpe pliée -->
+                            <ellipse cx="50" cy="60" rx="35" ry="22" fill="#F5D7A1" stroke="#E8B17E" stroke-width="1.5"/>
+                            <path d="M 15 60 Q 25 45 50 40 Q 75 45 85 60" fill="#FFFACD" stroke="#E8B17E" stroke-width="1.5"/>
+                            <!-- Garniture chocolat -->
+                            <path d="M 35 55 Q 40 50 50 52 Q 60 50 65 55" fill="#6B4423" stroke="#4A2E1A" stroke-width="1"/>
+                            <!-- Détails plis -->
+                            <path d="M 30 58 Q 35 54 40 58" stroke="#D4AF37" stroke-width="0.8" fill="none" opacity="0.5"/>
+                            <path d="M 60 58 Q 65 54 70 58" stroke="#D4AF37" stroke-width="0.8" fill="none" opacity="0.5"/>
+                            <!-- Sucre -->
+                            <circle cx="35" cy="48" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+                            <circle cx="45" cy="45" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+                            <circle cx="55" cy="46" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+                            <circle cx="65" cy="49" r="1.5" fill="#FFFFFF" opacity="0.9"/>
+                        </svg>
+                    </div>
+                    <h4>Crêpes</h4>
+                    <p>
+                        Tradition bretonne authentique avec crêpes sucrées préparées minute. Au sucre, 
+                        caramel au beurre salé ou chocolat pour une pause gourmande inoubliable.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Assiette -->
+                            <ellipse cx="50" cy="75" rx="32" ry="10" fill="#E0E0E0" stroke="#B0B0B0" stroke-width="1.5"/>
+                            <!-- Galette pliée en triangle -->
+                            <path d="M 35 60 L 65 60 L 50 30 Z" fill="#8B7355" stroke="#6B5843" stroke-width="1.5"/>
+                            <path d="M 35 60 L 50 68 L 65 60" fill="#A0826D" stroke="#6B5843" stroke-width="1.5"/>
+                            <!-- Garniture visible -->
+                            <ellipse cx="50" cy="55" rx="8" ry="4" fill="#FFD54F" opacity="0.8"/>
+                            <path d="M 45 50 Q 50 48 55 50" stroke="#E63946" stroke-width="2" fill="none" opacity="0.7"/>
+                            <!-- Œuf -->
+                            <ellipse cx="50" cy="45" rx="6" ry="5" fill="#FFFFFF" stroke="#F0F0F0" stroke-width="1"/>
+                            <circle cx="50" cy="45" r="2.5" fill="#FFD54F"/>
+                        </svg>
+                    </div>
+                    <h4>Galettes</h4>
+                    <p>
+                        Galettes bretonnes salées au sarrasin. Garnies de fromage, jambon, œuf et ingrédients 
+                        locaux pour un repas complet et savoureux à la bretonne.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Gaufre -->
+                            <rect x="28" y="38" width="44" height="32" rx="4" fill="#F5D7A1" stroke="#E8B17E" stroke-width="1.5"/>
+                            <!-- Quadrillage -->
+                            <line x1="38" y1="38" x2="38" y2="70" stroke="#D4AF37" stroke-width="1.5"/>
+                            <line x1="48" y1="38" x2="48" y2="70" stroke="#D4AF37" stroke-width="1.5"/>
+                            <line x1="58" y1="38" x2="58" y2="70" stroke="#D4AF37" stroke-width="1.5"/>
+                            <line x1="28" y1="48" x2="72" y2="48" stroke="#D4AF37" stroke-width="1.5"/>
+                            <line x1="28" y1="58" x2="72" y2="58" stroke="#D4AF37" stroke-width="1.5"/>
+                            <!-- Sucre glace -->
+                            <rect x="30" y="40" width="40" height="28" fill="#FFFFFF" opacity="0.3"/>
+                            <circle cx="35" cy="45" r="1" fill="#FFFFFF"/>
+                            <circle cx="50" cy="43" r="1.2" fill="#FFFFFF"/>
+                            <circle cx="65" cy="46" r="1" fill="#FFFFFF"/>
+                            <circle cx="40" cy="55" r="1" fill="#FFFFFF"/>
+                            <circle cx="60" cy="54" r="1.2" fill="#FFFFFF"/>
+                            <!-- Beurre fondu -->
+                            <ellipse cx="50" cy="30" rx="8" ry="4" fill="#FFE680" stroke="#FFD54F" stroke-width="1" opacity="0.8"/>
+                        </svg>
+                    </div>
+                    <h4>Gaufres</h4>
+                    <p>
+                        Gaufres chaudes et croustillantes, sucrées à souhait. Nature, au sucre glace, 
+                        chantilly ou chocolat pour ravir les gourmands de tous âges.
+                    </p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Galette enroulée (base) -->
+                            <path d="M 32 75 L 35 35 Q 35 30 50 30 Q 65 30 65 35 L 68 75 Z" fill="#8B7355" stroke="#6B5843" stroke-width="1.5"/>
+                            <!-- Salade qui dépasse -->
+                            <path d="M 40 35 Q 38 30 40 28 Q 42 26 44 28" fill="#7CB342" stroke="#558B2F" stroke-width="1"/>
+                            <path d="M 56 35 Q 58 30 60 28 Q 62 26 64 29" fill="#7CB342" stroke="#558B2F" stroke-width="1"/>
+                            <!-- Viande kebab -->
+                            <rect x="40" y="42" width="20" height="8" fill="#A0522D" stroke="#8B4513" stroke-width="1" rx="1"/>
+                            <rect x="38" y="52" width="24" height="8" fill="#8B4513" stroke="#6B3410" stroke-width="1" rx="1"/>
+                            <rect x="40" y="62" width="20" height="7" fill="#A0522D" stroke="#8B4513" stroke-width="1" rx="1"/>
+                            <!-- Sauce -->
+                            <path d="M 42 48 Q 50 50 58 48" stroke="#FFFFFF" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+                            <path d="M 40 58 Q 50 60 60 58" stroke="#FFE680" stroke-width="2" opacity="0.7" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h4>Kebab Breton</h4>
+                    <p>
+                        Fusion originale : le kebab revisité à la bretonne. Galette de sarrasin garnie 
+                        de viande grillée et légumes frais pour une expérience culinaire unique.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item fade-in">
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Événements Réalisés</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Produits Artisanaux</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Foodtrucks Disponibles</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Jeux & Animations</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Divertissement et Décoration Section -->
+    <section id="jeux" class="process">
+        <div class="section-header fade-in">
+            <div class="section-label">Animations & Ambiance</div>
+            <h2 class="section-title">Divertissement et Décoration</h2>
+        </div>
+        <div class="services-grid" style="max-width: 1400px; margin: 0 auto;">
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="25" stroke-width="1.5"/>
+                        <circle cx="50" cy="50" r="15" stroke-width="1.5"/>
+                        <circle cx="50" cy="50" r="5" stroke-width="2" fill="currentColor"/>
+                        <line x1="50" y1="15" x2="50" y2="25" stroke-width="2"/>
+                        <line x1="50" y1="75" x2="50" y2="85" stroke-width="2"/>
+                        <line x1="15" y1="50" x2="25" y2="50" stroke-width="2"/>
+                        <line x1="75" y1="50" x2="85" y2="50" stroke-width="2"/>
+                        <path d="M 45 45 L 40 35 M 55 45 L 60 35" stroke-width="1.5"/>
+                        <path d="M 45 55 L 40 65 M 55 55 L 60 65" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h4>Fléchettes Électroniques</h4>
+                <p>
+                    Machines professionnelles pour tournois et animations. Parfait pour créer une ambiance 
+                    compétitive et conviviale lors de vos événements corporate ou privés.
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="30" width="60" height="40" rx="3" stroke-width="2"/>
+                        <line x1="50" y1="30" x2="50" y2="70" stroke-width="1.5"/>
+                        <circle cx="35" cy="50" r="3" fill="currentColor"/>
+                        <circle cx="65" cy="50" r="3" fill="currentColor"/>
+                        <line x1="30" y1="40" x2="40" y2="40" stroke-width="1.5"/>
+                        <line x1="60" y1="40" x2="70" y2="40" stroke-width="1.5"/>
+                        <line x1="30" y1="60" x2="40" y2="60" stroke-width="1.5"/>
+                        <line x1="60" y1="60" x2="70" y2="60" stroke-width="1.5"/>
+                        <rect x="25" y="72" width="8" height="15" rx="2" stroke-width="1.5"/>
+                        <rect x="67" y="72" width="8" height="15" rx="2" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <h4>Baby-Foot Professionnel</h4>
+                <p>
+                    Tables de baby-foot de qualité pour animer vos soirées. Idéal pour les tournois inter-services, 
+                    team building et moments de détente lors de séminaires.
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="20" width="50" height="65" rx="4" stroke-width="2"/>
+                        <rect x="30" y="25" width="40" height="30" rx="2" stroke-width="1.5"/>
+                        <circle cx="35" cy="67" r="4" stroke-width="1.5"/>
+                        <circle cx="50" cy="67" r="4" stroke-width="1.5"/>
+                        <circle cx="65" cy="67" r="4" stroke-width="1.5"/>
+                        <line x1="40" y1="77" x2="60" y2="77" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="40" cy="35" r="2" fill="currentColor"/>
+                        <circle cx="60" cy="35" r="2" fill="currentColor"/>
+                        <circle cx="50" cy="45" r="3" fill="currentColor"/>
+                    </svg>
+                </div>
+                <h4>Flippers Vintage</h4>
+                <p>
+                    Collection de flippers classiques et modernes. L'attraction rétro qui plaît à toutes les 
+                    générations pour des événements nostalgiques et ludiques.
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="25" width="60" height="55" rx="4" stroke-width="2"/>
+                        <rect x="25" y="30" width="50" height="35" rx="2" stroke-width="1.5"/>
+                        <path d="M 40 40 Q 50 35 60 40" stroke-width="1.5" fill="none"/>
+                        <circle cx="45" cy="45" r="2" fill="currentColor"/>
+                        <circle cx="55" cy="45" r="2" fill="currentColor"/>
+                        <path d="M 42 52 Q 50 56 58 52" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        <rect x="35" y="70" width="10" height="8" rx="1" stroke-width="1.5"/>
+                        <rect x="55" y="70" width="10" height="8" rx="1" stroke-width="1.5"/>
+                        <line x1="50" y1="68" x2="50" y2="72" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h4>Machine à Peluches</h4>
+                <p>
+                    Machines à pinces pour remporter des peluches. Animation ludique et festive, 
+                    idéale pour les kermesses, fêtes familiales et événements avec enfants.
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="50" cy="60" rx="18" ry="8" stroke-width="2"/>
+                        <ellipse cx="35" cy="62" rx="8" ry="4" stroke-width="1.5"/>
+                        <ellipse cx="65" cy="62" rx="8" ry="4" stroke-width="1.5"/>
+                        <path d="M 40 35 L 45 55 M 60 35 L 55 55" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="42" y="25" width="16" height="12" rx="2" stroke-width="2"/>
+                        <circle cx="46" cy="30" r="1.5" fill="currentColor"/>
+                        <circle cx="54" cy="30" r="1.5" fill="currentColor"/>
+                        <path d="M 48 33 Q 50 34 52 33" stroke-width="1.5" fill="none"/>
+                        <path d="M 50 55 L 50 60" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h4>Scooter Déco</h4>
+                <p>
+                    Scooters vintage décoratifs pour créer une ambiance rétro italienne. Éléments de décor 
+                    photo-friendly parfaits pour personnaliser l'atmosphère de vos événements.
+                </p>
+            </div>
+            <div class="service-card fade-in">
+                <div class="service-icon">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="25" y="20" width="50" height="60" rx="3" stroke-width="2"/>
+                        <rect x="30" y="28" width="40" height="20" rx="2" stroke-width="1.5"/>
+                        <line x1="35" y1="55" x2="65" y2="55" stroke-width="2"/>
+                        <line x1="35" y1="62" x2="60" y2="62" stroke-width="1.5"/>
+                        <line x1="35" y1="68" x2="55" y2="68" stroke-width="1.5"/>
+                        <circle cx="45" cy="38" r="6" stroke-width="1.5" fill="none"/>
+                        <path d="M 42 36 L 45 39 L 50 34" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h4>PLV Décorations</h4>
+                <p>
+                    Éléments de publicité sur lieu de vente personnalisés. Kakémonos, panneaux et décorations 
+                    pour habiller vos espaces et renforcer votre identité visuelle.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="catalogue" class="experience">
+        <div class="section-header fade-in">
+            <div class="section-label">Notre Expertise</div>
+            <h2 class="section-title">L'événementiel, un domaine dans lequel<br>DiPeppo a de l'expérience</h2>
+        </div>
+        <div class="experience-list">
+            <div class="experience-item fade-in">Fêtes Maritimes de Brest et des Abers</div>
+            <div class="experience-item fade-in">Les Escales</div>
+            <div class="experience-item fade-in">Course du Figaro Concarneau</div>
+            <div class="experience-item fade-in">Jumping International de Dinard</div>
+            <div class="experience-item fade-in">Foire de Genève</div>
+            <div class="experience-item fade-in">Également des mariages, anniversaires, kermesses</div>
+        </div>
+        <div class="experience-gallery">
+            <div class="experience-gallery-item fade-in"></div>
+            <div class="experience-gallery-item fade-in"></div>
+            <div class="experience-gallery-item fade-in"></div>
+            <div class="experience-gallery-item fade-in"></div>
+            <div class="experience-gallery-item fade-in"></div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact-form-section">
+        <div class="section-header fade-in">
+            <div class="section-label">Contactez-Nous</div>
+            <h2 class="section-title">Louez-moi pour un événement</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info fade-in">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--marron); margin-bottom: 2rem;">
+                    Envoyez-nous un petit message afin de prendre contact et établir votre devis !
+                </p>
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <div>
+                            <p>06.98.72.20.40</p>
+                            <p>09.54.93.49.90</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <div>
+                            <p>27, rue Jacques Daguerre</p>
+                            <p>44600, Saint-Nazaire</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        <p>contact@ogelato.fr</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <h3>Nous contacter</h3>
+                <form action="#" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Prénom</label>
+                            <input type="text" name="prenom" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nom de famille</label>
+                            <input type="text" name="nom" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Société</label>
+                        <input type="text" name="societe">
+                    </div>
+                    <div class="form-group">
+                        <label>Téléphone</label>
+                        <input type="tel" name="telephone">
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail <span>*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Adresse</label>
+                        <input type="text" name="adresse">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ville</label>
+                            <input type="text" name="ville">
+                        </div>
+                        <div class="form-group">
+                            <label>Code postal/ZIP</label>
+                            <input type="text" name="code_postal">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Contacter</label>
+                        <textarea name="message" placeholder="Parlez-nous de votre événement..."></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>DiPeppo Events</h3>
+                <p>
+                    Saveurs italiennes et bretonnes authentiques, animations ludiques professionnelles. 
+                    Nous créons des expériences gourmandes et conviviales pour tous vos événements.
+                </p>
+            </div>
+            <div class="footer-links">
+                <h4>Nos Services</h4>
+                <ul>
+                    <li><a href="#foodtrucks">Foodtrucks Italien & Breton</a></li>
+                    <li><a href="#jeux">Divertissement & Décoration</a></li>
+                    <li><a href="#contact">Devis Personnalisé</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:contact@dipeppo-events.fr">contact@dipeppo-events.fr</a></li>
+                    <li><a href="tel:+33223456789">+33 2 23 45 67 89</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DiPeppo Events - Bretagne. Tous droits réservés. | <a href="#" style="color: var(--accent);">Mentions légales</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Stats counter animation
+        const animateStats = () => {
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const target = stat.textContent;
+                const isPercentage = target.includes('%');
+                const hasPlus = target.includes('+');
+                const hasMinus = target.includes('k');
+                
+                let number = parseInt(target.replace(/[^\d]/g, ''));
+                let current = 0;
+                const increment = number / 50;
+                
+                const updateCounter = () => {
+                    current += increment;
+                    if (current < number) {
+                        stat.textContent = Math.ceil(current) + (isPercentage ? '%' : '') + (hasPlus ? '+' : '') + (hasMinus ? 'k+' : '');
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        stat.textContent = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        };
+
+        // Trigger stats animation when in view
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    </script>
+</body>
+</html>
