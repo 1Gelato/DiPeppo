@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Foodtrucks & Trailers | DiPeppo Events - Gastronomie Itinérante</title>
+    <meta name="description" content="Découvrez notre flotte de foodtrucks premium : Gelato italien, Focaccia artisanale de Genova et spécialités bretonnes pour tous vos événements.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --noir: #1A0F0A;
+            --blanc: #FFF9F5;
+            --rouge: #C73E1D;
+            --beige: #F5E6D3;
+            --marron: #5C3D2E;
+            --accent: #D89B6A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--blanc);
+            color: var(--noir);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVIGATION FIXE */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 1.5rem 4rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 249, 245, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--beige);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--marron);
+            text-decoration: none;
+        }
+        
+        .logo span { color: var(--rouge); font-style: italic; }
+
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { 
+            color: var(--noir); 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover { color: var(--rouge); }
+
+        /* HEADER DYNAMIQUE */
+        .page-header {
+            padding: 14rem 2rem 8rem;
+            background: linear-gradient(135deg, var(--beige) 0%, var(--blanc) 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            font-weight: 300;
+            color: var(--marron);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+        /* SECTIONS FOODTRUCKS */
+        .truck-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            margin-bottom: 10rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .truck-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .truck-card:nth-child(even) { direction: rtl; }
+        .truck-card:nth-child(even) .text-content { direction: ltr; }
+
+        .image-box {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: var(--beige);
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .image-box:hover img { transform: scale(1.03); }
+
+        .text-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--marron);
+            line-height: 1.2;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--rouge);
+            color: white;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .features-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.8rem;
+            position: relative;
+            color: var(--marron);
+        }
+
+        .features-list li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--rouge);
+            font-size: 0.8rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: var(--noir);
+            color: var(--blanc);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 1px solid var(--noir);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--noir);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--marron);
+            color: var(--blanc);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            .truck-card { grid-template-columns: 1fr; gap: 3rem; text-align: center; }
+            .features-list li { padding-left: 0; }
+            .features-list li::before { display: none; }
+            nav { padding: 1rem 2rem; }
+            .nav-links { display: none; } /* Menu mobile simplifié */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="evenementiel-landing.html" class="logo">Di<span>Peppo</span></a>
+        <ul class="nav-links">
+            <li><a href="evenementiel-landing.html">Accueil</a></li>
+            <li><a href="#" style="color: var(--rouge); font-weight: 600;">Foodtrucks</a></li>
+            <li><a href="evenementiel-landing.html#jeux">Animations</a></li>
+            <li><a href="evenementiel-landing.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="badge" style="background: var(--marron);">VOTRE ÉVÉNEMENT SUR MESURE</span>
+            <h1>Nos Foodtrucks & Unités Gastronomiques</h1>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.15rem; color: var(--marron);">
+                De l'authenticité italienne aux traditions bretonnes, découvrez une flotte de modules mobiles haut de gamme pour sublimer vos réceptions, salons et mariages.
+            </p>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 8rem 0;">
+        
+        <section class="truck-card">
+            <div class="image-box">
+                <img src="image_26b012.jpg" alt="Trailer Gelato Italien Artisanal">
+            </div>
+            <div class="text-content">
+                <span class="badge">Fraîcheur & Tradition</span>
+                <h2>Le Trailer Gelateria</h2>
+                <p>Offrez à vos convives la véritable <em>Dolce Vita</em>. Nos glaces artisanales italiennes sont turbinées avec passion. Un module élégant qui devient le point central de vos événements estivaux.</p>
+                <ul class="features-list">
+                    <li>Gelato Fresco servi à la spatule</li>
+                    <li>Sundaes gourmands et toppings maison</li>
+                    <li>Granitas siciliens aux fruits frais ou alcools</li>
+                </ul>
+                <a href="#contact" class="cta-button">Réserver le Gelato</a>
+            </div>
+        </section>
+
+        <section class="truck-card">
+            <div class="image-box">
+                <img src="image_26b00f.jpg" alt="Foodtruck Focaccia et Panito">
+            </div>
+            <div class="text-content">
+                <span class="badge">Saveurs Salées Gourmet</span>
+                <h2>L'Unité Focacceria & Panito</h2>
+                <p>Découvrez la croustillance d'une Focaccia de Genova authentique. Nos Panitos grillés minute offrent un contraste de textures unique pour vos déjeuners d'affaires ou cocktails dînatoires.</p>
+                <ul class="features-list">
+                    <li>Focaccias artisanales à l'huile d'olive extra vierge</li>
+                    <li>Panitos salés chauds et croustillants</li>
+                    <li>Sélection de produits de nos producteurs locaux</li>
+                </ul>
+                <a href="#contact" class="cta-button">Devis Traiteur</a>
+            </div>
+        </section>
+
+        <section class="truck-card">
+            <div class="image-box">
+                <img src="image_26af9b.jpg" alt="Spécialités Bretonnes et Cookies">
+            </div>
+            <div class="text-content">
+                <span class="badge">Terroir de Bretagne</span>
+                <h2>Le Foodtruck Breton</h2>
+                <p>Le mariage parfait entre tradition et modernité. Des galettes au sarrasin garnies de produits nobles et nos célèbres cookies artisanaux pour une touche sucrée irrésistible.</p>
+                <ul class="features-list">
+                    <li>Galettes bretonnes et Kebab Breton original</li>
+                    <li>Crêpes et Gaufres au caramel beurre salé maison</li>
+                    <li>Cookies artisanaux cuits sur place</li>
+                </ul>
+                <a href="#contact" class="cta-button">Découvrir le menu</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; margin-bottom: 1rem;">DiPeppo Events</h2>
+            <p style="opacity: 0.8; margin-bottom: 2rem;">Créateur d'émotions gourmandes pour vos plus beaux moments.</p>
+            <p style="font-size: 0.8rem; opacity: 0.5;">&copy; 2026 - Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animation au scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.truck-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
