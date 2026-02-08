@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Allow: /*.css$
+Allow: /*.js$
+Allow: /images/
+Disallow: /404.html
+
+Sitemap: https://www.dipeppo.fr/sitemap.xml
+LLMs-txt: https://www.dipeppo.fr/llms.txt

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodtruck Italien Saint-Nazaire | Glaces, Crêpes & Paninis — DiPeppo</title>
+    <meta name="description" content="Foodtruck italien DiPeppo à Saint-Nazaire (44) : glaces artisanales, crêpes, paninis et spécialités italiennes pour vos événements. Mariage, festival, fête d'entreprise en Loire-Atlantique.">
+    <meta name="keywords" content="foodtruck italien, Saint-Nazaire, glaces artisanales, crêpes, paninis, événement, mariage, festival, Loire-Atlantique, DiPeppo">
+    <meta name="author" content="DiPeppo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.dipeppo.fr/foodtruck.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dipeppo.fr/foodtruck.html">
+    <meta property="og:title" content="Foodtruck Italien Saint-Nazaire | Glaces, Crêpes & Paninis — DiPeppo">
+    <meta property="og:description" content="Foodtruck italien DiPeppo à Saint-Nazaire (44) : glaces artisanales, crêpes, paninis et spécialités italiennes pour vos événements.">
+    <meta property="og:image" content="https://www.dipeppo.fr/images/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="DiPeppo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Foodtruck Italien Saint-Nazaire | Glaces, Crêpes & Paninis — DiPeppo">
+    <meta name="twitter:description" content="Foodtruck italien DiPeppo à Saint-Nazaire (44) : glaces artisanales, crêpes, paninis et spécialités italiennes pour vos événements.">
+    <meta name="twitter:image" content="https://www.dipeppo.fr/images/og-image.jpg">
+
+    <!-- Geo -->
+    <meta name="geo.region" content="FR-44">
+    <meta name="geo.placename" content="Saint-Nazaire">
+    <meta name="geo.position" content="47.2733;-2.2134">
+    <meta name="ICBM" content="47.2733, -2.2134">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FoodEstablishment",
+        "name": "Foodtruck DiPeppo",
+        "description": "Foodtruck italien proposant glaces artisanales, crêpes, paninis et spécialités italiennes pour vos événements en Loire-Atlantique.",
+        "servesCuisine": "Italian",
+        "url": "https://www.dipeppo.fr/foodtruck.html",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Saint-Nazaire",
+            "postalCode": "44600",
+            "addressRegion": "Loire-Atlantique",
+            "addressCountry": "FR"
+        },
+        "telephone": "+33XXXXXXXXX",
+        "priceRange": "€€",
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 47.2733,
+                "longitude": -2.2134
+            },
+            "geoRadius": "100000"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://www.dipeppo.fr/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Foodtruck Italien",
+                "item": "https://www.dipeppo.fr/foodtruck.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Fonts async -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="stylesheet" href="css/global.css?v=1">
+    <style>
+        /* Hero */
+        .hero-foodtruck {
+            background: linear-gradient(135deg, #D32F2F 0%, #EF5350 50%, #C62828 100%);
+            padding: 10rem 2rem 5rem;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-foodtruck::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 70%, rgba(249,168,37,0.12) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255,255,255,0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-foodtruck h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .hero-foodtruck .subtitle {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            max-width: 750px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1.5rem 2rem;
+            background: var(--cream, #FFF9F0);
+        }
+        .breadcrumb-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            color: var(--gray, #5D4E47);
+        }
+        .breadcrumb-inner a {
+            color: var(--rosso, #D32F2F);
+            text-decoration: none;
+        }
+        .breadcrumb-inner a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb-inner span {
+            margin: 0 0.5rem;
+            color: var(--light-gray, #E8DDD4);
+        }
+
+        /* Section base */
+        .section {
+            padding: 5rem 2rem;
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--dark, #2C1810);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            color: var(--gray, #5D4E47);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.6;
+        }
+
+        /* Le Concept - Split layout */
+        .concept-section {
+            background: #fff;
+        }
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .concept-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--dark, #2C1810);
+            margin-bottom: 1.5rem;
+        }
+        .concept-text p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            color: var(--gray, #5D4E47);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .concept-image {
+            background: linear-gradient(135deg, var(--cream, #FFF9F0), var(--light-gray, #E8DDD4));
+            border-radius: 20px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Outfit', sans-serif;
+            color: var(--gray, #5D4E47);
+            font-size: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        /* Notre Menu */
+        .menu-section {
+            background: var(--cream, #FFF9F0);
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .menu-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .menu-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .menu-card .card-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .menu-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark, #2C1810);
+            margin-bottom: 0.75rem;
+        }
+        .menu-card p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            color: var(--gray, #5D4E47);
+            line-height: 1.6;
+        }
+        .menu-link {
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+        }
+        .menu-link a {
+            color: var(--rosso, #D32F2F);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .menu-link a:hover {
+            color: var(--rosso-light, #EF5350);
+            text-decoration: underline;
+        }
+
+        /* Pour quels evenements */
+        .events-section {
+            background: #fff;
+        }
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        .event-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 2rem;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .event-card .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .event-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--dark, #2C1810);
+            margin-bottom: 0.5rem;
+        }
+        .event-card p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            color: var(--gray, #5D4E47);
+            line-height: 1.5;
+        }
+
+        /* Stats bar */
+        .stats-section {
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+            padding: 4rem 2rem;
+        }
+        .stats-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+        .stat-item .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--oro, #F9A825);
+            margin-bottom: 0.5rem;
+        }
+        .stat-item .stat-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            color: #fff;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Cross-link section */
+        .crosslink-section {
+            background: var(--cream, #FFF9F0);
+        }
+        .crosslink-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 3rem;
+            text-align: center;
+        }
+        .crosslink-box .card-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .crosslink-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--dark, #2C1810);
+            margin-bottom: 1rem;
+        }
+        .crosslink-box p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            color: var(--gray, #5D4E47);
+            line-height: 1.8;
+        }
+        .crosslink-box a {
+            color: var(--rosso, #D32F2F);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .crosslink-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #D32F2F 0%, #EF5350 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            color: #fff;
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .cta-section p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: #fff;
+            color: var(--rosso, #D32F2F);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 1rem 2.5rem;
+            border-radius: 48px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .cta-phone {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            opacity: 0.95;
+        }
+        .cta-phone a {
+            color: var(--oro, #F9A825);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .cta-phone a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-foodtruck h1 {
+                font-size: 2.6rem;
+            }
+            .concept-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .concept-image {
+                min-height: 300px;
+            }
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .events-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-foodtruck {
+                padding: 8rem 1.5rem 3rem;
+            }
+            .hero-foodtruck h1 {
+                font-size: 2rem;
+            }
+            .hero-foodtruck .subtitle {
+                font-size: 1.1rem;
+            }
+            .section {
+                padding: 3rem 1.5rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .concept-text h2 {
+                font-size: 1.8rem;
+            }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stat-item .stat-number {
+                font-size: 2.2rem;
+            }
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+            .crosslink-box {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- Hero -->
+    <section class="hero-foodtruck">
+        <h1>Foodtruck Italien DiPeppo</h1>
+        <p class="subtitle">Glaces artisanales, crêpes et spécialités italiennes directement à votre événement</p>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <div class="breadcrumb-inner">
+            <a href="/">Accueil</a>
+            <span>›</span>
+            Foodtruck Italien
+        </div>
+    </nav>
+
+    <!-- Le Concept -->
+    <section class="section concept-section">
+        <div class="section-container">
+            <div class="concept-grid">
+                <div class="concept-text">
+                    <h2>Le Concept</h2>
+                    <p>Notre foodtruck italien sillonne le Grand Ouest pour apporter la dolce vita à vos événements. Glaces artisanales préparées sur place, crêpes gourmandes, paninis chauds et autres spécialités italiennes — le tout dans une ambiance festive et conviviale.</p>
+                    <p>Que ce soit pour un festival de plusieurs milliers de personnes ou une fête privée entre amis, notre foodtruck s'adapte à toutes les configurations. Nous apportons le matériel, les ingrédients et le savoir-faire : vous n'avez qu'à profiter.</p>
+                </div>
+                <div class="concept-image">
+                    <span>[ Photo du Foodtruck DiPeppo ]</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notre Menu -->
+    <section class="section menu-section">
+        <div class="section-container">
+            <h2 class="section-title">Notre Menu</h2>
+            <p class="section-subtitle">Des spécialités italiennes gourmandes et authentiques, préparées devant vous avec des ingrédients de qualité.</p>
+
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="card-icon">🍦</div>
+                    <h3>Gelato & Sorbets</h3>
+                    <p>Nos glaces artisanales sont préparées avec des machines professionnelles Tutto Gelato. Plus de 20 parfums disponibles : pistache, stracciatella, citron de Sicile, mangue, framboise, noisette du Piémont et bien d'autres.</p>
+                </div>
+                <div class="menu-card">
+                    <div class="card-icon">🥞</div>
+                    <h3>Crêpes & Gaufres</h3>
+                    <p>Crêpes sucrées et salées préparées à la minute. Nutella, caramel beurre salé, confiture artisanale, jambon-fromage... Un classique indémodable qui ravit petits et grands.</p>
+                </div>
+                <div class="menu-card">
+                    <div class="card-icon">🍕</div>
+                    <h3>Paninis & Salé</h3>
+                    <p>Paninis chauds garnis de produits italiens : mozzarella di bufala, jambon de Parme, pesto alla genovese, tomates séchées, roquette... Un vrai voyage en Italie.</p>
+                </div>
+            </div>
+
+            <p class="menu-link"><a href="nos-gelato.html">Découvrir tous nos parfums &rarr;</a></p>
+        </div>
+    </section>
+
+    <!-- Pour Quels Événements -->
+    <section class="section events-section">
+        <div class="section-container">
+            <h2 class="section-title">Pour Quels Événements ?</h2>
+            <p class="section-subtitle">Le foodtruck DiPeppo se déplace partout en Loire-Atlantique et dans le Grand Ouest pour régaler vos invités.</p>
+
+            <div class="events-grid">
+                <a href="evenementiel.html" class="event-card">
+                    <div class="card-icon">🎪</div>
+                    <h3>Festivals & Fêtes</h3>
+                    <p>Fêtes communales, kermesses, événements en plein air : notre foodtruck régale les foules.</p>
+                </a>
+                <a href="mariages-evenements-prives.html" class="event-card">
+                    <div class="card-icon">💒</div>
+                    <h3>Mariages & Réceptions</h3>
+                    <p>Un bar à glaces ou un foodtruck complet pour surprendre vos invités le jour J.</p>
+                </a>
+                <a href="evenementiel.html" class="event-card">
+                    <div class="card-icon">🏢</div>
+                    <h3>Entreprises & Team Building</h3>
+                    <p>Séminaires, afterworks, journées portes ouvertes : une pause gourmande pour vos équipes.</p>
+                </a>
+                <a href="mariages-evenements-prives.html" class="event-card">
+                    <div class="card-icon">🎂</div>
+                    <h3>Anniversaires & Privés</h3>
+                    <p>Anniversaires, baptêmes, fêtes entre amis : un foodtruck italien à domicile.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Le Foodtruck en Chiffres -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Personnes servies par jour</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Parfums de glaces</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100 km</div>
+                <div class="stat-label">Rayon d'intervention</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">2h</div>
+                <div class="stat-label">Installation sur site</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cross-link Section -->
+    <section class="section crosslink-section">
+        <div class="section-container">
+            <div class="crosslink-box">
+                <div class="card-icon">🇮🇹</div>
+                <h2>Du Matériel Professionnel Italien</h2>
+                <p>Toutes nos glaces sont préparées avec les <a href="https://www.ogelato.fr/machines-glaces.html" target="_blank" rel="noopener">machines professionnelles Tutto Gelato</a> importées d'Italie par notre partenaire <a href="https://www.ogelato.fr/" target="_blank" rel="noopener">O'Gelato</a>. Nos <a href="https://www.ogelato.fr/machines-granites.html" target="_blank" rel="noopener">machines à granités</a> sont également fournies par O'Gelato.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Réservez le Foodtruck pour Votre Événement</h2>
+        <p>Contactez-nous pour réserver le foodtruck DiPeppo. Devis gratuit et personnalisé selon votre événement.</p>
+        <a href="devis.html" class="btn-primary">Demander un Devis</a>
+        <p class="cta-phone">Ou appelez-nous au <a href="tel:+33XXXXXXXXX">XX XX XX XX XX</a></p>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="navbar-inline.js?v=1"></script>
+    <script src="footer-inline.js?v=1"></script>
+</body>
+</html>

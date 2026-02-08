@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page introuvable — DiPeppo</title>
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Google Fonts async -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+
+    <link rel="stylesheet" href="css/global.css?v=1">
+
+    <style>
+        :root {
+            --rosso: #D32F2F;
+            --rosso-light: #EF5350;
+            --oro: #F9A825;
+            --notte: #1A237E;
+            --cream: #FFF9F0;
+            --dark: #2C1810;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--cream);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            position: relative;
+            z-index: 2;
+        }
+
+        .error-code {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(8rem, 20vw, 14rem);
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--rosso) 0%, var(--oro) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 4px 12px rgba(211, 47, 47, 0.15));
+        }
+
+        .error-message {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .error-subtitle {
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            color: #5D4037;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .error-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .error-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .error-btn--primary {
+            background: linear-gradient(135deg, var(--rosso), var(--rosso-light));
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        .error-btn--primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+        }
+
+        .error-btn--secondary {
+            background: #fff;
+            color: var(--dark);
+            border: 2px solid var(--rosso);
+        }
+
+        .error-btn--secondary:hover {
+            background: var(--rosso);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Floating emojis */
+        .floating-emojis {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .emoji {
+            position: absolute;
+            font-size: 2rem;
+            animation: floatUp linear infinite;
+            opacity: 0;
+        }
+
+        .emoji:nth-child(1) { left: 5%; animation-duration: 12s; animation-delay: 0s; font-size: 2.2rem; }
+        .emoji:nth-child(2) { left: 15%; animation-duration: 10s; animation-delay: 1.5s; font-size: 1.8rem; }
+        .emoji:nth-child(3) { left: 28%; animation-duration: 14s; animation-delay: 3s; font-size: 2.5rem; }
+        .emoji:nth-child(4) { left: 40%; animation-duration: 11s; animation-delay: 0.5s; font-size: 1.6rem; }
+        .emoji:nth-child(5) { left: 55%; animation-duration: 13s; animation-delay: 2s; font-size: 2rem; }
+        .emoji:nth-child(6) { left: 68%; animation-duration: 9s; animation-delay: 4s; font-size: 2.3rem; }
+        .emoji:nth-child(7) { left: 78%; animation-duration: 15s; animation-delay: 1s; font-size: 1.7rem; }
+        .emoji:nth-child(8) { left: 88%; animation-duration: 11s; animation-delay: 3.5s; font-size: 2.1rem; }
+        .emoji:nth-child(9) { left: 35%; animation-duration: 12s; animation-delay: 5s; font-size: 1.9rem; }
+        .emoji:nth-child(10) { left: 92%; animation-duration: 10s; animation-delay: 2.5s; font-size: 2.4rem; }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.7;
+            }
+            90% {
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateY(-10vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Subtle background decoration */
+        .error-container::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(249, 168, 37, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        @media (max-width: 768px) {
+            .error-container {
+                padding: 1.5rem;
+            }
+
+            .error-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .error-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="floating-emojis">
+        <span class="emoji">🎪</span>
+        <span class="emoji">🍦</span>
+        <span class="emoji">🎯</span>
+        <span class="emoji">🎰</span>
+        <span class="emoji">⚽</span>
+        <span class="emoji">🎪</span>
+        <span class="emoji">🍦</span>
+        <span class="emoji">🎯</span>
+        <span class="emoji">🎰</span>
+        <span class="emoji">⚽</span>
+    </div>
+
+    <div class="error-container">
+        <div class="error-code">404</div>
+        <h1 class="error-message">Oups ! Cette page a pris la fuite...</h1>
+        <p class="error-subtitle">Elle est peut-être partie animer un festival.<br>En attendant son retour :</p>
+        <div class="error-buttons">
+            <a href="index.html" class="error-btn error-btn--primary">🏠 Retour à l'accueil</a>
+            <a href="evenementiel.html" class="error-btn error-btn--secondary">🎪 Nos Services</a>
+            <a href="contact.html" class="error-btn error-btn--secondary">✉️ Nous contacter</a>
+        </div>
+    </div>
+
+</body>
+</html>

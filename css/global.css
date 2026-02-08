@@ -1,0 +1,57 @@
+/* =============================================
+   DIPEPPO — STYLES GLOBAUX
+   Variables CSS, reset, typographie
+   ============================================= */
+
+:root {
+    /* Couleurs primaires — Festif & Italie */
+    --rosso: #D32F2F;
+    --rosso-light: #EF5350;
+    --rosso-dark: #B71C1C;
+    --oro: #F9A825;
+    --oro-light: #FDD835;
+    --oro-dark: #E68A00;
+    --verde: #2E7D32;
+    --verde-light: #4CAF50;
+    --notte: #1A237E;
+    --notte-light: #3949AB;
+
+    /* Neutres */
+    --cream: #FFF9F0;
+    --cream-dark: #F5ECDF;
+    --dark: #2C1810;
+    --gray: #5D4E47;
+    --light-gray: #E8DDD4;
+    --white: #FFFFFF;
+
+    /* Dégradés */
+    --gradient-rosso: linear-gradient(135deg, var(--rosso) 0%, var(--rosso-light) 100%);
+    --gradient-oro: linear-gradient(135deg, var(--oro) 0%, var(--oro-light) 100%);
+    --gradient-verde: linear-gradient(135deg, var(--verde) 0%, var(--verde-light) 100%);
+    --gradient-notte: linear-gradient(135deg, var(--notte) 0%, var(--notte-light) 100%);
+    --gradient-festif: linear-gradient(135deg, var(--rosso) 0%, var(--oro) 100%);
+
+    /* Ombres */
+    --shadow-soft: 0 10px 40px rgba(44, 24, 16, 0.08);
+    --shadow-card: 0 8px 32px rgba(44, 24, 16, 0.12);
+    --shadow-medium: 0 20px 60px rgba(44, 24, 16, 0.15);
+
+    /* Rayons de bordure */
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 32px;
+    --radius-xl: 48px;
+}
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+/* Corps */
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(180deg, var(--cream) 0%, #FFF5E6 50%, var(--cream-dark) 100%);
+    background-attachment: fixed;
+    color: var(--dark);
+    line-height: 1.6;
+}

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Galerie Photos | Événements, Foodtruck, Mariages — DiPeppo</title>
+    <meta name="description" content="Découvrez DiPeppo en images : nos événements, le foodtruck italien, les mariages, les jeux de loisirs. Festivals, fêtes d'entreprise en Loire-Atlantique.">
+    <meta name="keywords" content="galerie photos DiPeppo, événements Saint-Nazaire, foodtruck italien photos, animation mariage images, location jeux loisirs, festivals Loire-Atlantique">
+    <meta name="author" content="DiPeppo">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.dipeppo.fr/galerie.html">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.dipeppo.fr/galerie.html">
+    <meta property="og:title" content="Galerie Photos | Événements, Foodtruck, Mariages — DiPeppo">
+    <meta property="og:description" content="Découvrez DiPeppo en images : nos événements, le foodtruck italien, les mariages, les jeux de loisirs. Festivals, fêtes d'entreprise en Loire-Atlantique.">
+    <meta property="og:image" content="https://www.dipeppo.fr/images/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="DiPeppo">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galerie Photos | Événements, Foodtruck, Mariages — DiPeppo">
+    <meta name="twitter:description" content="Découvrez DiPeppo en images : nos événements, le foodtruck italien, les mariages, les jeux de loisirs. Festivals, fêtes d'entreprise en Loire-Atlantique.">
+    <meta name="twitter:image" content="https://www.dipeppo.fr/images/og-image.jpg">
+
+    <!-- Geo Tags pour SEO local -->
+    <meta name="geo.region" content="FR-44">
+    <meta name="geo.placename" content="Saint-Nazaire, Loire-Atlantique">
+    <meta name="geo.position" content="47.2733;-2.2134">
+    <meta name="ICBM" content="47.2733, -2.2134">
+
+    <!-- Schema.org ImageGallery -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ImageGallery",
+        "name": "Galerie Photos DiPeppo",
+        "description": "Découvrez DiPeppo en images : nos événements, le foodtruck italien, les mariages, les jeux de loisirs. Festivals, fêtes d'entreprise en Loire-Atlantique.",
+        "url": "https://www.dipeppo.fr/galerie.html",
+        "publisher": {
+            "@type": "LocalBusiness",
+            "name": "DiPeppo",
+            "url": "https://www.dipeppo.fr"
+        }
+    }
+    </script>
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Accueil",
+                "item": "https://www.dipeppo.fr/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Galerie",
+                "item": "https://www.dipeppo.fr/galerie.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="css/global.css?v=1">
+
+    <style>
+        /* Hero Galerie */
+        .hero-galerie {
+            background: linear-gradient(135deg, #F9A825 0%, #FDD835 100%);
+            padding: 10rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-galerie::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: float-hero 20s ease-in-out infinite;
+        }
+        @keyframes float-hero {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, -30px); }
+        }
+        .hero-galerie h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--dark, #2C1810);
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-galerie .subtitle {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            color: var(--dark, #2C1810);
+            opacity: 0.85;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--cream, #FFF9F0);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--light-gray, #E8DDD4);
+        }
+        .breadcrumb-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            color: var(--gray, #5D4E47);
+        }
+        .breadcrumb-inner a {
+            color: var(--rosso, #D32F2F);
+            text-decoration: none;
+        }
+        .breadcrumb-inner a:hover {
+            text-decoration: underline;
+        }
+        .breadcrumb-inner span {
+            margin: 0 0.5rem;
+            color: var(--light-gray, #E8DDD4);
+        }
+
+        /* Filter Buttons */
+        .filter-section {
+            padding: 3rem 2rem 1rem;
+            background: var(--cream, #FFF9F0);
+        }
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+        }
+        .filter-btn {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 0.6rem 1.5rem;
+            border-radius: 48px;
+            border: 2px solid var(--rosso, #D32F2F);
+            background: transparent;
+            color: var(--rosso, #D32F2F);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover {
+            background: rgba(211, 47, 47, 0.08);
+        }
+        .filter-btn.active {
+            background: var(--rosso, #D32F2F);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        /* Photo Grid */
+        .gallery-section {
+            padding: 2rem 2rem 5rem;
+            background: var(--cream, #FFF9F0);
+        }
+        .gallery-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            columns: 3;
+            column-gap: 1.5rem;
+        }
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: opacity 0.4s ease, transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item.hidden {
+            display: none;
+        }
+        .gallery-item-inner {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1.5rem 1.5rem;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            color: #fff;
+        }
+        .gallery-tag {
+            display: inline-block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            margin-bottom: 0.5rem;
+        }
+        .gallery-desc {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            color: #fff;
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .cta-section p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--rosso, #D32F2F), var(--rosso-light, #EF5350));
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 1rem 2.5rem;
+            border-radius: 48px;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(211,47,47,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(211,47,47,0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-galerie h1 {
+                font-size: 2.6rem;
+            }
+            .gallery-grid {
+                columns: 2;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-galerie {
+                padding: 8rem 1.5rem 3rem;
+            }
+            .hero-galerie h1 {
+                font-size: 2rem;
+            }
+            .hero-galerie .subtitle {
+                font-size: 1.05rem;
+            }
+            .filter-section {
+                padding: 2rem 1.5rem 1rem;
+            }
+            .gallery-section {
+                padding: 2rem 1.5rem 3rem;
+            }
+            .gallery-grid {
+                columns: 1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .cta-section {
+                padding: 3rem 1.5rem;
+            }
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- Hero -->
+    <section class="hero-galerie">
+        <h1>Galerie Photos &amp; Réalisations</h1>
+        <p class="subtitle">DiPeppo en images — Nos événements, notre foodtruck, nos jeux</p>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <div class="breadcrumb-inner">
+            <a href="/">Accueil</a>
+            <span>&rsaquo;</span>
+            Galerie
+        </div>
+    </nav>
+
+    <!-- Filter Buttons -->
+    <section class="filter-section">
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="tous">Tous</button>
+            <button class="filter-btn" data-filter="foodtruck">Foodtruck</button>
+            <button class="filter-btn" data-filter="festivals">Festivals</button>
+            <button class="filter-btn" data-filter="mariages">Mariages</button>
+            <button class="filter-btn" data-filter="jeux">Jeux</button>
+        </div>
+    </section>
+
+    <!-- Photo Grid -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+
+            <!-- 1 — Foodtruck -->
+            <div class="gallery-item" data-category="foodtruck">
+                <div class="gallery-item-inner" style="height: 350px; background: linear-gradient(135deg, #D32F2F 0%, #EF5350 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Foodtruck</span>
+                        <p class="gallery-desc">Le foodtruck en action au festival de Saint-Nazaire</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 — Festivals -->
+            <div class="gallery-item" data-category="festivals">
+                <div class="gallery-item-inner" style="height: 250px; background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Festivals</span>
+                        <p class="gallery-desc">Animation au Festival des Solidarités</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 — Mariages -->
+            <div class="gallery-item" data-category="mariages">
+                <div class="gallery-item-inner" style="height: 300px; background: linear-gradient(135deg, #F9A825 0%, #FDD835 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Mariages</span>
+                        <p class="gallery-desc">Bar à gelato pour un mariage à La Baule</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 — Jeux -->
+            <div class="gallery-item" data-category="jeux">
+                <div class="gallery-item-inner" style="height: 350px; background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Jeux</span>
+                        <p class="gallery-desc">Tournoi de fléchettes en entreprise</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 — Foodtruck -->
+            <div class="gallery-item" data-category="foodtruck">
+                <div class="gallery-item-inner" style="height: 250px; background: linear-gradient(135deg, #EF5350 0%, #FF8A80 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Foodtruck</span>
+                        <p class="gallery-desc">Préparation de crêpes pour 200 convives</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 — Festivals -->
+            <div class="gallery-item" data-category="festivals">
+                <div class="gallery-item-inner" style="height: 300px; background: linear-gradient(135deg, #3949AB 0%, #5C6BC0 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Festivals</span>
+                        <p class="gallery-desc">Installation sur le marché de Noël</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 7 — Mariages -->
+            <div class="gallery-item" data-category="mariages">
+                <div class="gallery-item-inner" style="height: 250px; background: linear-gradient(135deg, #FDD835 0%, #FFEE58 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Mariages</span>
+                        <p class="gallery-desc">Flippers et babyfoot pour une soirée de mariage</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 8 — Jeux -->
+            <div class="gallery-item" data-category="jeux">
+                <div class="gallery-item-inner" style="height: 300px; background: linear-gradient(135deg, #4CAF50 0%, #81C784 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Jeux</span>
+                        <p class="gallery-desc">Machine coup de poing au salon de l'entreprise</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 9 — Foodtruck -->
+            <div class="gallery-item" data-category="foodtruck">
+                <div class="gallery-item-inner" style="height: 300px; background: linear-gradient(135deg, #D32F2F 0%, #EF5350 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Foodtruck</span>
+                        <p class="gallery-desc">Service de paninis chauds en festival</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 10 — Festivals -->
+            <div class="gallery-item" data-category="festivals">
+                <div class="gallery-item-inner" style="height: 350px; background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Festivals</span>
+                        <p class="gallery-desc">Ambiance festival avec nos jeux rétro</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 11 — Mariages -->
+            <div class="gallery-item" data-category="mariages">
+                <div class="gallery-item-inner" style="height: 350px; background: linear-gradient(135deg, #F9A825 0%, #FDD835 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Mariages</span>
+                        <p class="gallery-desc">Les mariés devant le foodtruck DiPeppo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 12 — Jeux -->
+            <div class="gallery-item" data-category="jeux">
+                <div class="gallery-item-inner" style="height: 250px; background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">Jeux</span>
+                        <p class="gallery-desc">Babyfoot géant en extérieur</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Vous Souhaitez une Animation Similaire ?</h2>
+        <p>Demandez un devis gratuit et personnalisé pour votre événement. Notre équipe vous répond sous 24h.</p>
+        <a href="devis.html" class="btn-primary">Demander un Devis</a>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="navbar-inline.js?v=1"></script>
+    <script src="footer-inline.js?v=1"></script>
+
+    <!-- Gallery Filter Script -->
+    <script>
+    (function() {
+        var buttons = document.querySelectorAll('.filter-btn');
+        var items = document.querySelectorAll('.gallery-item');
+
+        buttons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var filter = this.getAttribute('data-filter');
+
+                // Update active button
+                buttons.forEach(function(b) { b.classList.remove('active'); });
+                this.classList.add('active');
+
+                // Filter items
+                items.forEach(function(item) {
+                    if (filter === 'tous' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                        item.style.opacity = '0';
+                        setTimeout(function() {
+                            item.style.opacity = '1';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(function() {
+                            item.classList.add('hidden');
+                        }, 400);
+                    }
+                });
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
