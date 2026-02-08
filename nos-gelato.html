@@ -307,7 +307,7 @@
         .key-point {
             background: #fff;
             border-radius: 20px;
-            padding: 2rem 1.5rem;
+            overflow: hidden;
             text-align: center;
             box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -316,6 +316,27 @@
         .key-point:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(44, 24, 16, 0.14);
+        }
+
+        .key-point__image {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .key-point__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .key-point:hover .key-point__image img {
+            transform: scale(1.08);
+        }
+
+        .key-point__content {
+            padding: 1.5rem 1.5rem 2rem;
         }
 
         .key-point__icon {
@@ -366,6 +387,22 @@
             font-size: 2.5rem;
             margin-bottom: 0.75rem;
             display: block;
+        }
+
+        .flavor-card__photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 0.75rem;
+            display: block;
+            box-shadow: 0 4px 16px rgba(44, 24, 16, 0.12);
+            border: 3px solid var(--cream);
+            transition: transform 0.4s ease;
+        }
+
+        .flavor-card:hover .flavor-card__photo {
+            transform: scale(1.08);
         }
 
         .flavor-card__name {
@@ -420,19 +457,33 @@
         .cornet-chip {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             background: #fff;
             border-radius: 50px;
-            padding: 0.6rem 1.5rem;
+            padding: 0.5rem 1.5rem 0.5rem 0.5rem;
             box-shadow: 0 4px 16px rgba(44, 24, 16, 0.08);
             font-family: 'Outfit', sans-serif;
             font-size: 0.95rem;
             font-weight: 600;
             color: var(--dark);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cornet-chip:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(44, 24, 16, 0.14);
         }
 
         .cornet-chip__emoji {
             font-size: 1.3rem;
+        }
+
+        .cornet-chip__img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--cream);
         }
 
         /* Feature highlight (for Fresco, Sundae, Granita) */
@@ -664,6 +715,15 @@
                 padding-bottom: 3rem;
             }
 
+            .key-point__image {
+                height: 140px;
+            }
+
+            .flavor-card__photo {
+                width: 80px;
+                height: 80px;
+            }
+
             .flavors-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 0.75rem;
@@ -747,19 +807,29 @@
             <!-- 3 key points -->
             <div class="key-points">
                 <div class="key-point">
-                    <span class="key-point__icon">&#x2699;&#xFE0F;</span>
-                    <div class="key-point__title">Machines performantes</div>
-                    <p class="key-point__text">Mod&egrave;les comptoir et vertical Tutto Gelato, import&eacute;s directement d'Italie pour une qualit&eacute; constante.</p>
+                    <div class="key-point__image">
+                        <img src="images/gelato/tg3-glace.webp" alt="Machine à glaces italiennes Tutto Gelato" width="400" height="180" loading="lazy">
+                    </div>
+                    <div class="key-point__content">
+                        <div class="key-point__title">Machines performantes</div>
+                        <p class="key-point__text">Mod&egrave;les comptoir et vertical Tutto Gelato, import&eacute;s directement d'Italie pour une qualit&eacute; constante.</p>
+                    </div>
                 </div>
                 <div class="key-point">
-                    <span class="key-point__icon">&#x1F366;</span>
-                    <div class="key-point__title">Pr&eacute;parations premium</div>
-                    <p class="key-point__text">Des bases glaces artisanales, fabriqu&eacute;es avec des ingr&eacute;dients d'origine contr&ocirc;l&eacute;e, pour un go&ucirc;t authentique.</p>
+                    <div class="key-point__image">
+                        <img src="images/gelato/caramel-beurre-sale.webp" alt="Préparation glace caramel beurre salé artisanale" width="400" height="180" loading="lazy">
+                    </div>
+                    <div class="key-point__content">
+                        <div class="key-point__title">Pr&eacute;parations premium</div>
+                        <p class="key-point__text">Des bases glaces artisanales, fabriqu&eacute;es avec des ingr&eacute;dients d'origine contr&ocirc;l&eacute;e, pour un go&ucirc;t authentique.</p>
+                    </div>
                 </div>
                 <div class="key-point">
-                    <span class="key-point__icon">&#x1F468;&#x200D;&#x1F373;</span>
-                    <div class="key-point__title">Personnel professionnel</div>
-                    <p class="key-point__text">Notre &eacute;quipe form&eacute;e garantit un service fluide et une exp&eacute;rience gourmande irr&eacute;prochable.</p>
+                    <div class="key-point__content">
+                        <span class="key-point__icon">&#x1F468;&#x200D;&#x1F373;</span>
+                        <div class="key-point__title">Personnel professionnel</div>
+                        <p class="key-point__text">Notre &eacute;quipe form&eacute;e garantit un service fluide et une exp&eacute;rience gourmande irr&eacute;prochable.</p>
+                    </div>
                 </div>
             </div>
 
@@ -822,10 +892,10 @@
                 <div class="cornets-block__title">Servis dans nos cornets artisanaux</div>
                 <div class="cornets-row">
                     <div class="cornet-chip">
-                        <span class="cornet-chip__emoji">&#x1F9C7;</span> Cornet Primavera
+                        <img src="images/gelato/cornet-primavera.webp" alt="Cornet Primavera" class="cornet-chip__img" width="48" height="48" loading="lazy"> Cornet Primavera
                     </div>
                     <div class="cornet-chip">
-                        <span class="cornet-chip__emoji">&#x1F9C7;</span> Cornet Artesano
+                        <img src="images/gelato/cornet-artesano.webp" alt="Cornet Artesano" class="cornet-chip__img" width="48" height="48" loading="lazy"> Cornet Artesano
                     </div>
                 </div>
             </div>
