@@ -6,7 +6,7 @@
 
     <!-- SEO Meta Tags -->
     <title>DiPeppo | Événementiel, Foodtruck & Location Jeux — Saint-Nazaire (44)</title>
-    <meta name="description" content="DiPeppo, spécialiste événementiel à Saint-Nazaire : foodtruck italien, animation mariage, location fléchettes, flippers, babyfoot. Festivals, fêtes privées, entreprises en Loire-Atlantique et Grand Ouest.">
+    <meta name="description" content="DiPeppo, spécialiste événementiel à Saint-Nazaire : gelato artisanal, focaccia, foodtruck italien, animation mariage, location jeux de loisirs. Festivals, mariages, entreprises en Loire-Atlantique, Bretagne et Grand Ouest.">
     <meta name="keywords" content="événementiel saint-nazaire, foodtruck italien loire-atlantique, animation mariage 44, location fléchettes, location flipper, location babyfoot, glaces événements">
     <meta name="author" content="DiPeppo">
     <meta name="robots" content="index, follow">
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.dipeppo.fr/">
     <meta property="og:title" content="DiPeppo | Événementiel, Foodtruck & Location Jeux — Saint-Nazaire (44)">
-    <meta property="og:description" content="DiPeppo, spécialiste événementiel à Saint-Nazaire : foodtruck italien, animation mariage, location fléchettes, flippers, babyfoot. Festivals, fêtes privées, entreprises en Loire-Atlantique et Grand Ouest.">
+    <meta property="og:description" content="DiPeppo, spécialiste événementiel à Saint-Nazaire : gelato artisanal, focaccia, foodtruck italien, animation mariage, location jeux de loisirs. Festivals, mariages, entreprises en Loire-Atlantique, Bretagne et Grand Ouest.">
     <meta property="og:image" content="https://www.dipeppo.fr/images/og-image.jpg">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="DiPeppo">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.dipeppo.fr/">
     <meta name="twitter:title" content="DiPeppo | Événementiel, Foodtruck & Location Jeux — Saint-Nazaire (44)">
-    <meta name="twitter:description" content="DiPeppo, spécialiste événementiel à Saint-Nazaire : foodtruck italien, animation mariage, location fléchettes, flippers, babyfoot.">
+    <meta name="twitter:description" content="DiPeppo, spécialiste événementiel à Saint-Nazaire : gelato artisanal, focaccia, foodtruck italien, animation mariage, location jeux de loisirs. Festivals, mariages, entreprises en Loire-Atlantique, Bretagne et Grand Ouest.">
     <meta name="twitter:image" content="https://www.dipeppo.fr/images/og-image.jpg">
 
     <!-- Geo Tags pour SEO local -->
@@ -1133,6 +1133,205 @@
             box-shadow: 0 12px 35px rgba(211, 47, 47, 0.45);
         }
 
+        /* ========== NOS GOURMANDISES SECTION ========== */
+        .gourmandises-section {
+            background: var(--cream-dark);
+        }
+
+        .gourmandises-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gourmandise-col {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            padding: 2rem 1.5rem;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .gourmandise-col:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .gourmandise-col h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--oro);
+        }
+
+        .gourmandise-col ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .gourmandise-col li {
+            font-size: 0.9rem;
+            color: var(--gray);
+            padding: 0.35rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .gourmandise-col li:last-child {
+            border-bottom: none;
+        }
+
+        /* ========== SAVOIR-FAIRE SECTION ========== */
+        .savoir-faire-section {
+            background: var(--white);
+        }
+
+        .savoir-faire-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .savoir-faire-card {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius-md);
+            background: var(--cream);
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s ease;
+        }
+
+        .savoir-faire-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .sf-flag {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .savoir-faire-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .savoir-faire-card p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        /* ========== PRODUCTEURS SECTION ========== */
+        .producteurs-section {
+            background: var(--cream);
+        }
+
+        .producteurs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .producteur-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            box-shadow: var(--shadow-card);
+            text-align: center;
+        }
+
+        .producteur-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .producteur-card ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .producteur-card li {
+            font-size: 1rem;
+            color: var(--dark);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .producteur-card li:last-child {
+            border-bottom: none;
+        }
+
+        .producteur-note {
+            font-size: 0.85rem;
+            color: var(--gray);
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* ========== FORMULES DE LOCATION SECTION ========== */
+        .formules-section {
+            background: var(--cream);
+        }
+
+        .formules-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .formule-card {
+            background: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: var(--shadow-card);
+            transition: all 0.4s ease;
+            display: block;
+        }
+
+        .formule-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-card-hover);
+        }
+
+        .formule-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .formule-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            padding: 1.25rem 1.5rem 0.5rem;
+        }
+
+        .formule-card p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            line-height: 1.6;
+            padding: 0 1.5rem;
+        }
+
+        .formule-card .service-link {
+            padding: 0.75rem 1.5rem 1.25rem;
+            display: inline-flex;
+        }
+
         /* ========== RESPONSIVE ========== */
         @media (max-width: 1024px) {
             .hero h1 {
@@ -1169,6 +1368,22 @@
 
             .section-header h2 {
                 font-size: 2.2rem;
+            }
+
+            .gourmandises-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .savoir-faire-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .formules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .producteurs-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1244,6 +1459,18 @@
                 padding: 0.8rem 1.5rem;
                 font-size: 0.95rem;
             }
+
+            .gourmandises-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .savoir-faire-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .formules-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -1263,12 +1490,12 @@
         <div class="hero-content">
             <div class="hero-badges">
                 <span class="hero-badge">🎪 Événementiel</span>
-                <span class="hero-badge">🍕 Foodtruck</span>
+                <span class="hero-badge">🍕 Gelato e Focaccia</span>
                 <span class="hero-badge">🎯 Location Jeux</span>
             </div>
-            <h1>DiPeppo — <span>Événementiel</span> &amp; Foodtruck Italien</h1>
+            <h1>DiPeppo — <span>Gelato e Focaccia</span> &amp; Événementiel</h1>
             <p class="hero-subtitle">
-                Animations, foodtruck italien et jeux de loisirs pour vos événements en Loire-Atlantique et Grand Ouest
+                Gelato artisanal, focaccia, foodtruck italien et jeux de loisirs pour vos événements. Saint-Nazaire, Brest et Grand Ouest
             </p>
             <div class="hero-buttons">
                 <a href="devis.html" class="btn btn-primary">Demander un Devis</a>
@@ -1297,8 +1524,8 @@
                 <!-- Service 2 : Foodtruck -->
                 <a href="foodtruck.html" class="service-card animate-on-scroll">
                     <span class="service-icon">🍕</span>
-                    <h3>Foodtruck Italien</h3>
-                    <p>Notre foodtruck parcourt le Grand Ouest : glaces artisanales, crêpes, paninis et spécialités italiennes.</p>
+                    <h3>Foodtruck Gelato e Focaccia</h3>
+                    <p>Notre foodtruck parcourt le Grand Ouest : gelato artisanal, focaccia, crêpes, gaufres, churros et spécialités italiennes salées.</p>
                     <span class="service-link">En savoir plus</span>
                 </a>
 
@@ -1321,6 +1548,67 @@
         </div>
     </section>
 
+    <!-- ========== NOS GOURMANDISES SECTION ========== -->
+    <section class="section gourmandises-section" id="gourmandises">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Nos Gourmandises</h2>
+                <div class="accent-line"></div>
+                <p>Une carte complète de produits artisanaux pour régaler tous vos convives</p>
+            </div>
+            <div class="gourmandises-grid">
+                <div class="gourmandise-col animate-on-scroll">
+                    <h3>🍨 Produits Gelato</h3>
+                    <ul>
+                        <li>Glaces Italiennes</li>
+                        <li>Gelato Fresco</li>
+                        <li>Glaces Sundae</li>
+                        <li>Bubble Tea</li>
+                        <li>Granitas Fruits/Alcool</li>
+                    </ul>
+                </div>
+                <div class="gourmandise-col animate-on-scroll">
+                    <h3>🧁 Produits Sucrés</h3>
+                    <ul>
+                        <li>Crêpes</li>
+                        <li>Gaufres</li>
+                        <li>Churros</li>
+                        <li>Panitos Sucrés</li>
+                    </ul>
+                </div>
+                <div class="gourmandise-col animate-on-scroll">
+                    <h3>🥖 Produits Salés</h3>
+                    <ul>
+                        <li>Focaccia</li>
+                        <li>Galettes</li>
+                        <li>Kebabs Bretons</li>
+                        <li>Churros Salés</li>
+                        <li>Panitos Salés</li>
+                    </ul>
+                </div>
+                <div class="gourmandise-col animate-on-scroll">
+                    <h3>🎯 Produits Loisirs</h3>
+                    <ul>
+                        <li>Machines Peluches</li>
+                        <li>Fléchettes</li>
+                        <li>Babyfoots</li>
+                        <li>Flippers</li>
+                    </ul>
+                </div>
+                <div class="gourmandise-col animate-on-scroll">
+                    <h3>🎨 Décorations</h3>
+                    <ul>
+                        <li>Buggy Déco</li>
+                        <li>Moto Déco</li>
+                        <li>Vélo Déco</li>
+                        <li>Scooter Déco</li>
+                        <li>PLV Décorations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== GELATO TEASER SECTION ========== -->
     <section class="section gelato-teaser" id="gelato">
         <div class="container">
@@ -1338,6 +1626,64 @@
                 </div>
                 <div class="gelato-visual animate-on-scroll">
                     <!-- Placeholder visual avec gradient -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SAVOIR-FAIRE SECTION ========== -->
+    <section class="section savoir-faire-section" id="savoir-faire">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Le Savoir-Faire de l'Artisan Glacier</h2>
+                <div class="accent-line"></div>
+                <p>Un savoir-faire artisanal entre France et Italie, transmis avec passion</p>
+            </div>
+            <div class="savoir-faire-grid">
+                <div class="savoir-faire-card animate-on-scroll">
+                    <div class="sf-flag">🇫🇷</div>
+                    <h3>Saint-Nazaire</h3>
+                    <p>Notre base, où tout commence. Atelier de production et point de départ de nos foodtrucks pour tout le Grand Ouest.</p>
+                </div>
+                <div class="savoir-faire-card animate-on-scroll">
+                    <div class="sf-flag">🇮🇹</div>
+                    <h3>Rimini</h3>
+                    <p>Notre source d'inspiration italienne. Machines Tutto Gelato, recettes authentiques et techniques artisanales directement importées d'Italie.</p>
+                </div>
+                <div class="savoir-faire-card sf-card-bretagne animate-on-scroll">
+                    <div class="sf-flag">🏴</div>
+                    <h3>Brest</h3>
+                    <p>Notre ancrage breton. Fraises de Plougastel, oignons de Roscoff, lait de ferme : des producteurs locaux d'excellence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCTEURS & ARTISANAUX SECTION ========== -->
+    <section class="section producteurs-section" id="producteurs">
+        <div class="container">
+            <div class="producteurs-grid">
+                <div class="producteur-card animate-on-scroll">
+                    <h3>🌾 Nos Producteurs</h3>
+                    <div class="accent-line" style="margin-bottom: 1.5rem;"></div>
+                    <ul>
+                        <li><strong>LBP</strong> — Fraise de Plougastel</li>
+                        <li><strong>Oignons de Roscoff</strong> — Bretagne</li>
+                        <li><strong>Lait Ferme Monfort</strong> — Local</li>
+                    </ul>
+                    <p class="producteur-note">Des ingrédients d'excellence, sélectionnés pour leur qualité artisanale</p>
+                </div>
+                <div class="producteur-card animate-on-scroll">
+                    <h3>🍯 Nos Produits Artisanaux</h3>
+                    <div class="accent-line" style="margin-bottom: 1.5rem;"></div>
+                    <ul>
+                        <li>Confitures artisanales</li>
+                        <li>Caramels au beurre salé</li>
+                        <li>Chocolats fins</li>
+                        <li>Pâte de fruits</li>
+                        <li>Miels locaux</li>
+                    </ul>
+                    <p class="producteur-note">En complément de nos gelato, une sélection gourmande à découvrir</p>
                 </div>
             </div>
         </div>
@@ -1412,6 +1758,43 @@
                     <h3>Profitez !</h3>
                     <p>Vos invités passent un moment inoubliable. Nous gérons l'animation pendant que vous profitez de votre événement.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FORMULES DE LOCATION SECTION ========== -->
+    <section class="section formules-section" id="formules">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Nos Formules de Location</h2>
+                <div class="accent-line"></div>
+                <p>Plusieurs formats pour s'adapter à tous vos événements</p>
+            </div>
+            <div class="formules-grid">
+                <a href="foodtruck.html" class="formule-card animate-on-scroll">
+                    <div class="formule-image" style="background: linear-gradient(135deg, #3949AB, #1A237E);"></div>
+                    <h3>Foodtrucks</h3>
+                    <p>Notre flotte de foodtrucks pour les grands événements et festivals.</p>
+                    <span class="service-link">Découvrir</span>
+                </a>
+                <a href="evenementiel.html" class="formule-card animate-on-scroll">
+                    <div class="formule-image" style="background: linear-gradient(135deg, #43A047, #2E7D32);"></div>
+                    <h3>Barnums</h3>
+                    <p>Stands et barnums aux couleurs italiennes pour marchés et foires.</p>
+                    <span class="service-link">Découvrir</span>
+                </a>
+                <a href="evenementiel.html" class="formule-card animate-on-scroll">
+                    <div class="formule-image" style="background: linear-gradient(135deg, #F9A825, #E68A00);"></div>
+                    <h3>Chariots Mobiles</h3>
+                    <p>Chariots gelato et kiosques itinérants pour une touche d'originalité.</p>
+                    <span class="service-link">Découvrir</span>
+                </a>
+                <a href="machines-glaces-granites.html" class="formule-card animate-on-scroll">
+                    <div class="formule-image" style="background: linear-gradient(135deg, #D32F2F, #B71C1C);"></div>
+                    <h3>Matériels</h3>
+                    <p>Location de machines à glaces, granités et matériel de cuisson professionnel.</p>
+                    <span class="service-link">Découvrir</span>
+                </a>
             </div>
         </div>
     </section>

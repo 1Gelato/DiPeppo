@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation Événementielle Loire-Atlantique | Festivals & Fêtes — DiPeppo</title>
-    <meta name="description" content="Animation événementielle en Loire-Atlantique (44) : foodtruck italien, glaces artisanales, jeux de loisirs pour festivals, fêtes communales, comités d'entreprise. Devis gratuit à Saint-Nazaire.">
+    <meta name="description" content="Animation événementielle en Loire-Atlantique (44) : foodtrucks, barnums, chariots mobiles, location de matériel (kiosque à glaces, machines). Festivals, fêtes, entreprises. Devis gratuit — DiPeppo Saint-Nazaire.">
     <meta name="keywords" content="animation événementielle, Loire-Atlantique, festival, fête communale, comité entreprise, foodtruck italien, jeux loisirs, Saint-Nazaire, DiPeppo">
     <meta name="author" content="DiPeppo">
     <meta name="robots" content="index, follow">
@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.dipeppo.fr/evenementiel.html">
     <meta property="og:title" content="Animation Événementielle Loire-Atlantique | Festivals & Fêtes — DiPeppo">
-    <meta property="og:description" content="Animation événementielle en Loire-Atlantique (44) : foodtruck italien, glaces artisanales, jeux de loisirs pour festivals, fêtes communales, comités d'entreprise. Devis gratuit à Saint-Nazaire.">
+    <meta property="og:description" content="Animation événementielle en Loire-Atlantique (44) : foodtrucks, barnums, chariots mobiles, location de matériel (kiosque à glaces, machines). Festivals, fêtes, entreprises. Devis gratuit — DiPeppo Saint-Nazaire.">
     <meta property="og:image" content="https://www.dipeppo.fr/images/og-image.jpg">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="DiPeppo">
@@ -22,7 +22,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Animation Événementielle Loire-Atlantique | Festivals & Fêtes — DiPeppo">
-    <meta name="twitter:description" content="Animation événementielle en Loire-Atlantique (44) : foodtruck italien, glaces artisanales, jeux de loisirs pour festivals, fêtes communales, comités d'entreprise.">
+    <meta name="twitter:description" content="Animation événementielle en Loire-Atlantique (44) : foodtrucks, barnums, chariots mobiles, location de matériel. Festivals, fêtes, entreprises. Devis gratuit — DiPeppo.">
     <meta name="twitter:image" content="https://www.dipeppo.fr/images/og-image.jpg">
 
     <!-- Geo -->
@@ -38,7 +38,7 @@
         "@type": "Service",
         "serviceType": "Animation événementielle",
         "name": "Animation Événementielle DiPeppo",
-        "description": "Animation événementielle en Loire-Atlantique : foodtruck italien, glaces artisanales, jeux de loisirs pour festivals, fêtes communales, comités d'entreprise.",
+        "description": "Animation événementielle en Loire-Atlantique : foodtrucks, barnums, chariots mobiles, location de matériel (kiosque à glaces, machines) pour festivals, fêtes, entreprises.",
         "provider": {
             "@type": "LocalBusiness",
             "name": "DiPeppo",
@@ -50,7 +50,7 @@
                 "addressRegion": "Loire-Atlantique",
                 "addressCountry": "FR"
             },
-            "telephone": "+33XXXXXXXXX",
+            "telephone": "+33954934990",
             "areaServed": {
                 "@type": "GeoCircle",
                 "geoMidpoint": {
@@ -64,6 +64,44 @@
         "areaServed": {
             "@type": "AdministrativeArea",
             "name": "Loire-Atlantique"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Formules DiPeppo",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Foodtrucks",
+                        "description": "Foodtruck italien tout équipé : glaces artisanales, crêpes, paninis et spécialités italiennes servis directement sur votre événement."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Barnums",
+                        "description": "Stand sous barnum aux couleurs italiennes avec préparation et service de spécialités italiennes sur place."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Chariots Mobiles",
+                        "description": "Chariots de glaces mobiles DiPeppo pour une distribution ambulante élégante au coeur de votre événement."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Location de Matériel",
+                        "description": "Location de kiosque à glaces, machines à glaces et équipements professionnels pour vos événements."
+                    }
+                }
+            ]
         }
     }
     </script>
@@ -287,6 +325,106 @@
             text-decoration: underline;
         }
 
+        /* Nos Formules */
+        .formules-section {
+            background: #fff;
+        }
+        .formules-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .formule-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .formule-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+        .formule-card .formule-image {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.5rem;
+        }
+        .formule-card .formule-image.bg-rosso {
+            background: linear-gradient(135deg, #D32F2F 0%, #EF5350 100%);
+        }
+        .formule-card .formule-image.bg-oro {
+            background: linear-gradient(135deg, #F9A825 0%, #FDD835 100%);
+        }
+        .formule-card .formule-image.bg-verde {
+            background: linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%);
+        }
+        .formule-card .formule-image.bg-notte {
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+        }
+        .formule-card .formule-body {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .formule-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark, #2C1810);
+            margin-bottom: 0.75rem;
+        }
+        .formule-card p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            color: var(--gray, #5D4E47);
+            line-height: 1.6;
+        }
+        .formules-deco {
+            background: var(--cream, #FFF9F0);
+            border-radius: 16px;
+            padding: 2rem 2.5rem;
+            text-align: center;
+        }
+        .formules-deco h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark, #2C1810);
+            margin-bottom: 0.75rem;
+        }
+        .formules-deco p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            color: var(--gray, #5D4E47);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .formules-deco .deco-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+        .formules-deco .deco-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: #fff;
+            border: 1px solid var(--cream-dark, #F5ECDF);
+            border-radius: 24px;
+            padding: 0.5rem 1.1rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            color: var(--dark, #2C1810);
+            font-weight: 500;
+        }
+
         /* Timeline / Deroulement */
         .deroulement-section {
             background: #fff;
@@ -458,6 +596,9 @@
             .prestations-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .formules-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .links-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -486,6 +627,12 @@
             }
             .prestations-grid {
                 grid-template-columns: 1fr;
+            }
+            .formules-grid {
+                grid-template-columns: 1fr;
+            }
+            .formules-deco {
+                padding: 1.5rem;
             }
             .links-grid {
                 grid-template-columns: 1fr;
@@ -583,6 +730,57 @@
         </div>
     </section>
 
+    <!-- Nos Formules -->
+    <section class="section formules-section" id="formules">
+        <div class="section-container">
+            <h2 class="section-title">Nos Formules</h2>
+            <p class="section-subtitle">Foodtruck, barnum, chariot mobile ou location de matériel : choisissez le format qui correspond à votre événement. Chaque formule est adaptable à vos besoins.</p>
+
+            <div class="formules-grid">
+                <div class="formule-card">
+                    <div class="formule-image bg-rosso">🚚</div>
+                    <div class="formule-body">
+                        <h3>Foodtrucks</h3>
+                        <p>Notre foodtruck italien tout équipé se déplace directement sur votre événement. Glaces artisanales, crêpes, paninis et spécialités italiennes : un service complet avec cuisson et préparation sur place.</p>
+                    </div>
+                </div>
+                <div class="formule-card">
+                    <div class="formule-image bg-oro">⛺</div>
+                    <div class="formule-body">
+                        <h3>Barnums</h3>
+                        <p>Stand sous barnum aux couleurs "Spécialités Italiennes" pour une implantation légère et modulable. Idéal pour les festivals, marchés et fêtes communales en intérieur comme en extérieur.</p>
+                    </div>
+                </div>
+                <div class="formule-card">
+                    <div class="formule-image bg-verde">🍦</div>
+                    <div class="formule-body">
+                        <h3>Chariots Mobiles</h3>
+                        <p>Nos chariots de glaces mobiles DiPeppo circulent au coeur de votre événement pour une distribution ambulante. Élégants et pratiques, ils viennent à la rencontre de vos invités.</p>
+                    </div>
+                </div>
+                <div class="formule-card">
+                    <div class="formule-image bg-notte">🏗️</div>
+                    <div class="formule-body">
+                        <h3>Location de Matériel</h3>
+                        <p>Louez nos équipements professionnels : kiosque "Le Kiosque à Glaces", machines à glaces italiennes, vitrines réfrigérées. Vous gérez, nous fournissons le matériel et l'accompagnement technique.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="formules-deco">
+                <h3>Accessoires & Décoration</h3>
+                <p>Complétez votre installation avec nos éléments de décoration et de PLV aux couleurs DiPeppo pour créer une véritable ambiance italienne sur votre événement.</p>
+                <div class="deco-tags">
+                    <span class="deco-tag">🛵 Scooter</span>
+                    <span class="deco-tag">🏍️ Moto</span>
+                    <span class="deco-tag">🚲 Vélo</span>
+                    <span class="deco-tag">🛒 Buggy</span>
+                    <span class="deco-tag">📋 PLV & Signalétique</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Déroulement -->
     <section class="section deroulement-section">
         <div class="section-container">
@@ -619,7 +817,7 @@
         <h2>Prêt à Organiser Votre Événement ?</h2>
         <p>Contactez-nous dès maintenant pour obtenir un devis personnalisé et gratuit. Notre équipe vous accompagne dans l'organisation de votre événement en Loire-Atlantique.</p>
         <a href="devis.html" class="btn-primary">Demander un Devis</a>
-        <p class="cta-phone">Ou appelez-nous directement au <a href="tel:+33XXXXXXXXX">XX XX XX XX XX</a></p>
+        <p class="cta-phone">Ou appelez-nous directement au <a href="tel:+33954934990">09 54 93 49 90</a></p>
     </section>
 
     <!-- Internal Links -->
