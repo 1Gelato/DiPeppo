@@ -30,12 +30,14 @@
         .footer-brand .logo-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #D32F2F 0%, #F9A825 100%);
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+        }
+
+        .footer-brand .logo-icon img {
+            width: 50px;
+            height: auto;
         }
 
         .footer-brand .logo-text {
@@ -182,7 +184,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <a href="#" class="logo">
-                    <div class="logo-icon">🎪</div>
+                    <div class="logo-icon"><img src="images/logo-dipeppo.svg" alt="DiPeppo" width="50" height="50"></div>
                     <span class="logo-text">DiPeppo</span>
                 </a>
                 <p>
@@ -243,7 +245,7 @@
         <div class="footer-content">
             <div class="footer-brand">
                 <a href="index.html" class="logo">
-                    <div class="logo-icon">🎪</div>
+                    <div class="logo-icon"><img src="images/logo-dipeppo.svg" alt="DiPeppo" width="50" height="50"></div>
                     <span class="logo-text">DiPeppo</span>
                 </a>
                 <p>
@@ -307,7 +309,7 @@
         if (isIndexPage) {
             return indexFooterHTML;
         } else if (isInBlogFolder) {
-            return otherPagesFooterHTML.replace(/href="([^h#m][^"]*\.html)/g, 'href="../$1');
+            return otherPagesFooterHTML.replace(/href="([^h#m][^"]*\.html)/g, 'href="../$1').replace(/src="images\//g, 'src="../images/');
         } else {
             return otherPagesFooterHTML;
         }
