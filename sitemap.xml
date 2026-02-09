@@ -66,6 +66,31 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <!-- Blog -->
+    <url>
+        <loc>https://www.dipeppo.fr/blog/</loc>
+        <lastmod>2026-02-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.dipeppo.fr/blog/foodtruck-mariage-loire-atlantique.html</loc>
+        <lastmod>2026-02-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.dipeppo.fr/blog/animation-evenement-entreprise.html</loc>
+        <lastmod>2026-02-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.dipeppo.fr/blog/glaces-artisanales-evenements.html</loc>
+        <lastmod>2026-02-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <url>
         <loc>https://www.dipeppo.fr/mentions-legales.html</loc>
         <lastmod>2026-02-08</lastmod>

@@ -94,57 +94,94 @@
         }
 
         .blog-content {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 3rem 2rem 5rem;
-            text-align: center;
         }
 
-        .blog-coming {
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .blog-card {
             background: white;
             border-radius: 20px;
-            padding: 4rem 3rem;
-            box-shadow: 0 8px 32px rgba(44, 24, 16, 0.12);
-        }
-
-        .blog-coming .emoji {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .blog-coming h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: #2C1810;
-            margin-bottom: 1rem;
-        }
-
-        .blog-coming p {
-            color: #5D4E47;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 2rem;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background: linear-gradient(135deg, #D32F2F 0%, #EF5350 100%);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 48px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+        .blog-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(44, 24, 16, 0.16);
+        }
+
+        .blog-card__badge {
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            background: linear-gradient(135deg, #D32F2F, #EF5350);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.75rem;
+        }
+
+        .blog-card__content {
+            padding: 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-card__date {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.82rem;
+            color: #999;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card__title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #2C1810;
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .blog-card__excerpt {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.92rem;
+            color: #5D4E47;
+            line-height: 1.7;
+            flex: 1;
+        }
+
+        .blog-card__link {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #D32F2F;
+            margin-top: 1rem;
+            transition: color 0.2s;
+        }
+
+        .blog-card:hover .blog-card__link {
+            color: #EF5350;
         }
 
         @media (max-width: 768px) {
             .page-hero h1 { font-size: 2rem; }
-            .blog-coming { padding: 2.5rem 1.5rem; }
+            .blog-grid { grid-template-columns: 1fr; gap: 1.5rem; }
         }
     </style>
 </head>
@@ -161,15 +198,34 @@
     </div>
 
     <main class="blog-content">
-        <div class="blog-coming">
-            <div class="emoji">📝</div>
-            <h2>Articles à venir</h2>
-            <p>
-                Notre blog est en préparation ! Bientôt, retrouvez ici nos conseils pour organiser
-                vos événements, des idées d'animation pour vos mariages, des guides sur la location
-                de jeux et bien plus encore.
-            </p>
-            <a href="../devis.html" class="btn-primary">Demander un Devis en attendant</a>
+        <div class="blog-grid">
+            <a href="foodtruck-mariage-loire-atlantique.html" class="blog-card">
+                <div class="blog-card__content">
+                    <span class="blog-card__badge">Mariage</span>
+                    <div class="blog-card__date">9 f&eacute;vrier 2026</div>
+                    <h2 class="blog-card__title">Foodtruck pour Mariage en Loire-Atlantique : Le Guide Complet</h2>
+                    <p class="blog-card__excerpt">Pourquoi choisir un foodtruck pour votre mariage ? D&eacute;couvrez nos conseils, tarifs et id&eacute;es pour une r&eacute;ception originale et gourmande.</p>
+                    <span class="blog-card__link">Lire l'article &rarr;</span>
+                </div>
+            </a>
+            <a href="animation-evenement-entreprise.html" class="blog-card">
+                <div class="blog-card__content">
+                    <span class="blog-card__badge">Entreprise</span>
+                    <div class="blog-card__date">9 f&eacute;vrier 2026</div>
+                    <h2 class="blog-card__title">Animation &Eacute;v&eacute;nement d'Entreprise : Id&eacute;es Originales</h2>
+                    <p class="blog-card__excerpt">Foodtruck italien, jeux de loisirs, formules sur-mesure : comment dynamiser vos s&eacute;minaires et soir&eacute;es d'entreprise.</p>
+                    <span class="blog-card__link">Lire l'article &rarr;</span>
+                </div>
+            </a>
+            <a href="glaces-artisanales-evenements.html" class="blog-card">
+                <div class="blog-card__content">
+                    <span class="blog-card__badge">Gelato</span>
+                    <div class="blog-card__date">9 f&eacute;vrier 2026</div>
+                    <h2 class="blog-card__title">Glaces Artisanales pour &Eacute;v&eacute;nements : Pourquoi Choisir DiPeppo ?</h2>
+                    <p class="blog-card__excerpt">4 gammes de glaces, 9 parfums premium, machines Tutto Gelato : tout savoir sur notre offre gelato pour vos &eacute;v&eacute;nements.</p>
+                    <span class="blog-card__link">Lire l'article &rarr;</span>
+                </div>
+            </a>
         </div>
     </main>
 
