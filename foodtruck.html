@@ -339,27 +339,57 @@
             background: #fff;
         }
         .flavors-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.25rem;
             margin-bottom: 2rem;
         }
-        .flavor-tag {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--cream, #FFF9F0), #fff);
-            border: 1px solid var(--light-gray, #E8DDD4);
-            border-radius: 48px;
-            padding: 0.6rem 1.4rem;
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--dark, #2C1810);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .flavor-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 1.75rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .flavor-tag:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        .flavor-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(44, 24, 16, 0.14);
+        }
+        .flavor-card__photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            display: block;
+            box-shadow: 0 4px 16px rgba(44, 24, 16, 0.12);
+            border: 3px solid var(--cream, #FFF9F0);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        box-shadow 0.5s ease,
+                        border-color 0.4s ease;
+        }
+        .flavor-card:hover .flavor-card__photo {
+            transform: scale(1.18);
+            box-shadow: 0 12px 40px rgba(211, 47, 47, 0.25);
+            border-color: #FFCDD2;
+        }
+        .flavor-card__name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark, #2C1810);
+            transition: color 0.3s ease;
+        }
+        .flavor-card:hover .flavor-card__name {
+            color: var(--rosso, #D32F2F);
+        }
+        .flavor-card__origin {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            color: var(--gray, #8B7E74);
+            font-style: italic;
+            margin-top: 0.25rem;
         }
         .cornets-info {
             text-align: center;
@@ -630,6 +660,9 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 2rem;
             }
+            .flavors-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
         @media (max-width: 768px) {
             .hero-foodtruck {
@@ -673,6 +706,17 @@
             }
             .deco-box {
                 padding: 2rem;
+            }
+            .flavors-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+            .flavor-card {
+                padding: 1.25rem 1rem;
+            }
+            .flavor-card__photo {
+                width: 100px;
+                height: 100px;
             }
         }
     </style>
@@ -767,15 +811,51 @@
             <p class="section-subtitle">Des glaces italiennes élaborées avec des ingrédients d'exception, servies dans des cornets Primavera ou Artesano.</p>
 
             <div class="flavors-grid">
-                <div class="flavor-tag">Vanille Madagascar</div>
-                <div class="flavor-tag">Fraise de Plougastel</div>
-                <div class="flavor-tag">Chocolat Premium</div>
-                <div class="flavor-tag">Caramel Beurre Salé de Guérande</div>
-                <div class="flavor-tag">Pistache d'Italie</div>
-                <div class="flavor-tag">Café Noisette</div>
-                <div class="flavor-tag">Abricot Orange de Provence</div>
-                <div class="flavor-tag">Mangue</div>
-                <div class="flavor-tag">Cassis</div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/vanille.webp" alt="Glace vanille de Madagascar DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Vanille de Madagascar</div>
+                    <p class="flavor-card__origin">Gousse de vanille Bourbon</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/fraise.webp" alt="Glace fraise de Plougastel DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Fraise de Plougastel</div>
+                    <p class="flavor-card__origin">Bretagne, France</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/chocolat.webp" alt="Glace chocolat premium DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Chocolat Premium</div>
+                    <p class="flavor-card__origin">Cacao grand cru</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/caramel-beurre-sale.webp" alt="Glace caramel beurre salé de Guérande DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Caramel Beurre Salé</div>
+                    <p class="flavor-card__origin">Sel de Guérande</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/pistache.webp" alt="Glace pistache d'Italie DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Pistache d'Italie</div>
+                    <p class="flavor-card__origin">Sicile, Italie</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/cafe-noisette.webp" alt="Glace café noisette DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Café Noisette</div>
+                    <p class="flavor-card__origin">Arabica torréfié</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/abricot-orange.webp" alt="Glace abricot orange de Provence DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Abricot Orange</div>
+                    <p class="flavor-card__origin">Provence, France</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/mangue.webp" alt="Glace mangue DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Mangue</div>
+                    <p class="flavor-card__origin">Mangue Alphonso</p>
+                </div>
+                <div class="flavor-card">
+                    <img src="images/gelato/parfums/cassis.webp" alt="Glace cassis DiPeppo" class="flavor-card__photo" width="150" height="150" loading="lazy">
+                    <div class="flavor-card__name">Cassis</div>
+                    <p class="flavor-card__origin">Bourgogne, France</p>
+                </div>
             </div>
 
             <p class="cornets-info">Servies dans des <strong>cornets Primavera</strong> croustillants ou des <strong>cornets Artesano</strong> artisanaux pour une dégustation authentique.</p>
