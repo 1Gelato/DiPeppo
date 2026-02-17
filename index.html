@@ -1280,9 +1280,14 @@
         .producteur-card {
             background: var(--white);
             border-radius: var(--radius-lg);
-            padding: 3rem;
+            padding: 0;
             box-shadow: var(--shadow-card);
             text-align: center;
+            overflow: hidden;
+        }
+
+        .producteur-card__body {
+            padding: 2rem 3rem 3rem;
         }
 
         .producteur-card h3 {
@@ -1321,9 +1326,7 @@
             width: 100%;
             height: 220px;
             object-fit: cover;
-            border-radius: var(--radius-md);
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 16px rgba(44, 24, 16, 0.1);
+            display: block;
         }
 
         /* ========== FORMULES DE LOCATION SECTION ========== */
@@ -1728,27 +1731,31 @@
             <div class="producteurs-grid">
                 <div class="producteur-card animate-on-scroll">
                     <img src="images/champ-fraises.webp" alt="Champ de fraises de nos producteurs locaux" class="producteur-card__img" width="600" height="220" loading="lazy">
-                    <h3>🌾 Nos Producteurs</h3>
-                    <div class="accent-line" style="margin-bottom: 1.5rem;"></div>
-                    <ul>
-                        <li><strong>LBP</strong> — Fraise de Plougastel</li>
-                        <li><strong>Oignons de Roscoff</strong> — Bretagne</li>
-                        <li><strong>Lait Ferme Monfort</strong> — Local</li>
-                    </ul>
-                    <p class="producteur-note">Des ingrédients d'excellence, sélectionnés pour leur qualité artisanale</p>
+                    <div class="producteur-card__body">
+                        <h3>🌾 Nos Producteurs</h3>
+                        <div class="accent-line" style="margin-bottom: 1.5rem;"></div>
+                        <ul>
+                            <li><strong>LBP</strong> — Fraise de Plougastel</li>
+                            <li><strong>Oignons de Roscoff</strong> — Bretagne</li>
+                            <li><strong>Lait Ferme Monfort</strong> — Local</li>
+                        </ul>
+                        <p class="producteur-note">Des ingrédients d'excellence, sélectionnés pour leur qualité artisanale</p>
+                    </div>
                 </div>
                 <div class="producteur-card animate-on-scroll">
                     <img src="images/confiture-fraise.webp" alt="Confiture de fraise artisanale" class="producteur-card__img" width="600" height="220" loading="lazy">
-                    <h3>🍯 Nos Produits Artisanaux</h3>
-                    <div class="accent-line" style="margin-bottom: 1.5rem;"></div>
-                    <ul>
-                        <li>Confitures artisanales</li>
-                        <li>Caramels au beurre salé</li>
-                        <li>Chocolats fins</li>
-                        <li>Pâte de fruits</li>
-                        <li>Miels locaux</li>
-                    </ul>
-                    <p class="producteur-note">En complément de nos gelato, une sélection gourmande à découvrir</p>
+                    <div class="producteur-card__body">
+                        <h3>🍯 Nos Produits Artisanaux</h3>
+                        <div class="accent-line" style="margin-bottom: 1.5rem;"></div>
+                        <ul>
+                            <li>Confitures artisanales</li>
+                            <li>Caramels au beurre salé</li>
+                            <li>Chocolats fins</li>
+                            <li>Pâte de fruits</li>
+                            <li>Miels locaux</li>
+                        </ul>
+                        <p class="producteur-note">En complément de nos gelato, une sélection gourmande à découvrir</p>
+                    </div>
                 </div>
             </div>
         </div>
