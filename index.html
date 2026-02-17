@@ -432,7 +432,6 @@
             overflow: hidden;
             display: flex;
             align-items: center;
-            background: var(--gradient-notte);
         }
 
         .hero-bg {
@@ -441,11 +440,20 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background:
-                radial-gradient(ellipse at 20% 30%, rgba(249, 168, 37, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 70%, rgba(211, 47, 47, 0.1) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(57, 73, 171, 0.2) 0%, transparent 70%);
+            background: url('images/hero/hero.webp') center/cover no-repeat;
+            filter: blur(3px);
+            transform: scale(1.05);
             z-index: 0;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(26, 35, 126, 0.45);
         }
 
         .hero-shapes {
