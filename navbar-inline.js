@@ -195,7 +195,7 @@
             top: 100%;
             left: 50%;
             transform: translateX(-50%) translateY(15px);
-            min-width: 520px;
+            min-width: 320px;
             padding: 16px;
             opacity: 0;
             visibility: hidden;
@@ -388,18 +388,10 @@
                 <li class="nav-dropdown">
                     <a href="evenementiel.html" class="dropdown-trigger">Nos Services <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu glass-dropdown">
-                        <div class="dropdown-columns">
-                            <div class="dropdown-section">
-                                <span class="dropdown-title">Événementiel</span>
-                                <a href="evenementiel.html" class="dropdown-item">Festivals & Fêtes</a>
-                                <a href="foodtruck.html" class="dropdown-item">Foodtruck Italien</a>
-                                <a href="mariages-evenements-prives.html" class="dropdown-item">Mariages & Privés</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <span class="dropdown-title">Loisirs & Machines</span>
-                                <a href="location-jeux.html" class="dropdown-item">Location Jeux de Loisirs</a>
-                                <a href="machines-glaces-granites.html" class="dropdown-item">Machines Glaces & Granités</a>
-                            </div>
+                        <div class="dropdown-section">
+                            <a href="foodtruck.html" class="dropdown-item">Foodtrucks</a>
+                            <a href="evenementiel.html" class="dropdown-item">Matériel Prestation et Chariot Mobile</a>
+                            <a href="location-jeux.html" class="dropdown-item">Jeux de Loisirs</a>
                         </div>
                     </div>
                 </li>
