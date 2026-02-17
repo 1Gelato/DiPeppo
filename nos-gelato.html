@@ -453,54 +453,69 @@
         /* Cornets sub-section */
         .cornets-block {
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .cornets-block__title {
             font-family: 'Outfit', sans-serif;
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: 1.15rem;
+            font-weight: 700;
             color: var(--dark);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .cornets-row {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
-        .cornet-chip {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
+        .cornet-card {
             background: #fff;
-            border-radius: 50px;
-            padding: 0.5rem 1.5rem 0.5rem 0.5rem;
-            box-shadow: 0 4px 16px rgba(44, 24, 16, 0.08);
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: var(--dark);
+            border-radius: 20px;
+            padding: 2rem 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 240px;
         }
 
-        .cornet-chip:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(44, 24, 16, 0.14);
+        .cornet-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(44, 24, 16, 0.14);
         }
 
-        .cornet-chip__emoji {
-            font-size: 1.3rem;
-        }
-
-        .cornet-chip__img {
-            width: 48px;
-            height: 48px;
+        .cornet-card__img {
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid var(--cream);
+            margin: 0 auto 1.25rem;
+            display: block;
+            box-shadow: 0 4px 16px rgba(44, 24, 16, 0.12);
+            border: 3px solid var(--cream);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                        box-shadow 0.5s ease,
+                        border-color 0.4s ease;
+        }
+
+        .cornet-card:hover .cornet-card__img {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(211, 47, 47, 0.2);
+            border-color: var(--rosso-light);
+        }
+
+        .cornet-card__name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--dark);
+            transition: color 0.3s ease;
+        }
+
+        .cornet-card:hover .cornet-card__name {
+            color: var(--rosso);
         }
 
         /* Feature highlight (for Fresco, Sundae, Granita) */
@@ -787,6 +802,16 @@
             .granita-flavors {
                 gap: 0.5rem;
             }
+
+            .cornet-card {
+                width: 180px;
+                padding: 1.5rem 1.25rem 1.25rem;
+            }
+
+            .cornet-card__img {
+                width: 130px;
+                height: 130px;
+            }
         }
     </style>
 </head>
@@ -910,11 +935,13 @@
             <div class="cornets-block">
                 <div class="cornets-block__title">Servis dans nos cornets artisanaux</div>
                 <div class="cornets-row">
-                    <div class="cornet-chip">
-                        <img src="images/gelato/cornet-primavera.webp" alt="Cornet Primavera" class="cornet-chip__img" width="48" height="48" loading="lazy"> Cornet Primavera
+                    <div class="cornet-card">
+                        <img src="images/gelato/cornet-primavera.webp" alt="Cornet Primavera" class="cornet-card__img" width="180" height="180" loading="lazy">
+                        <div class="cornet-card__name">Cornet Primavera</div>
                     </div>
-                    <div class="cornet-chip">
-                        <img src="images/gelato/cornet-artesano.webp" alt="Cornet Artesano" class="cornet-chip__img" width="48" height="48" loading="lazy"> Cornet Artesano
+                    <div class="cornet-card">
+                        <img src="images/gelato/cornet-artesano.webp" alt="Cornet Artesano" class="cornet-card__img" width="180" height="180" loading="lazy">
+                        <div class="cornet-card__name">Cornet Artesano</div>
                     </div>
                 </div>
             </div>
