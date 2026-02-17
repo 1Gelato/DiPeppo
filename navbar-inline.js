@@ -389,7 +389,7 @@
                     <a href="evenementiel.html" class="dropdown-trigger">Nos Services <span class="dropdown-arrow">▼</span></a>
                     <div class="dropdown-menu glass-dropdown">
                         <div class="dropdown-section">
-                            <a href="foodtruck.html" class="dropdown-item">Foodtrucks</a>
+                            <a href="foodtruck.html" class="dropdown-item">Foodtrucks et Trailers</a>
                             <a href="evenementiel.html" class="dropdown-item">Matériel Prestation et Chariot Mobile</a>
                             <a href="location-jeux.html" class="dropdown-item">Jeux de Loisirs</a>
                         </div>
