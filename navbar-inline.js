@@ -396,7 +396,6 @@
                     </div>
                 </li>
                 <li><a href="nos-gelato.html">Nos Gelato</a></li>
-                <li><a href="galerie.html">Galerie</a></li>
                 <li><a href="devis.html" class="nav-cta">Devis Gratuit</a></li>
             </ul>
             <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
