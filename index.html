@@ -1320,6 +1320,10 @@
             gap: 2rem;
         }
 
+        .formules-grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         .formule-card {
             background: var(--white);
             border-radius: var(--radius-md);
@@ -1423,6 +1427,10 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .formules-grid-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
             .producteurs-grid {
                 grid-template-columns: 1fr;
             }
@@ -1512,6 +1520,10 @@
             .formules-grid {
                 grid-template-columns: 1fr;
             }
+
+            .formules-grid-3 {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -1530,60 +1542,53 @@
         </div>
         <div class="hero-content">
             <div class="hero-badges">
-                <span class="hero-badge">🎪 Événementiel</span>
-                <span class="hero-badge">🍕 Gelato e Focaccia</span>
-                <span class="hero-badge">🎯 Location Jeux</span>
+                <span class="hero-badge">🚚 Foodtrucks</span>
+                <span class="hero-badge">🍨 Matériel Glacier</span>
+                <span class="hero-badge">🎯 Loisirs & Décoration</span>
             </div>
-            <h1>DiPeppo — <span>Gelato e Focaccia</span> &amp; Événementiel</h1>
+            <h1>DiPeppo — <span>Nos solutions</span> événementielles</h1>
             <p class="hero-subtitle">
                 Gelato artisanal, focaccia, foodtruck italien et jeux de loisirs pour vos événements. Saint-Nazaire, Brest et Grand Ouest
             </p>
             <div class="hero-buttons">
                 <a href="devis.html" class="btn btn-primary">Demander un Devis</a>
-                <a href="#services" class="btn btn-secondary">Découvrir nos Services</a>
+                <a href="#formules" class="btn btn-secondary">Découvrir nos Formules</a>
             </div>
         </div>
     </section>
 
-    <!-- ========== SERVICES SECTION ========== -->
-    <section class="section services-section" id="services">
+    <!-- ========== FORMULES DE LOCATION SECTION (en haut) ========== -->
+    <section class="section formules-section" id="formules">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <h2>Nos Services</h2>
+                <h2>Nos Formules de Location</h2>
                 <div class="accent-line"></div>
-                <p>Des prestations sur-mesure pour animer tous vos événements dans le Grand Ouest</p>
+                <p>Plusieurs formats pour s'adapter à tous vos événements</p>
             </div>
-            <div class="services-grid">
-                <!-- Service 1 : Événementiel -->
-                <a href="evenementiel.html" class="service-card animate-on-scroll">
-                    <span class="service-icon">🎪</span>
-                    <h3>Événementiel &amp; Festivals</h3>
-                    <p>Animations complètes pour festivals, fêtes communales et événements d'entreprise. Foodtruck, glaces, jeux de loisirs.</p>
-                    <span class="service-link">En savoir plus</span>
+            <div class="formules-grid formules-grid-3">
+                <a href="foodtruck.html" class="formule-card animate-on-scroll">
+                    <div class="formule-image">
+                        <img src="images/formules/foodtruck.webp" alt="Foodtruck DiPeppo gelato artisanal italien" width="800" height="891" loading="lazy">
+                    </div>
+                    <h3>Foodtrucks</h3>
+                    <p>Notre flotte de foodtrucks pour les grands événements et festivals.</p>
+                    <span class="service-link">Découvrir</span>
                 </a>
-
-                <!-- Service 2 : Foodtruck -->
-                <a href="foodtruck.html" class="service-card animate-on-scroll">
-                    <span class="service-icon">🍕</span>
-                    <h3>Foodtruck Gelato e Focaccia</h3>
-                    <p>Notre foodtruck parcourt le Grand Ouest : gelato artisanal, focaccia, crêpes, gaufres, churros et spécialités italiennes salées.</p>
-                    <span class="service-link">En savoir plus</span>
+                <a href="evenementiel.html" class="formule-card animate-on-scroll">
+                    <div class="formule-image">
+                        <img src="images/formules/chariot-mobile.webp" alt="Chariot mobile gelato DiPeppo FRESCO service événementiel" width="800" height="800" loading="lazy">
+                    </div>
+                    <h3>Matériel Prestation et Chariot Mobile</h3>
+                    <p>Chariots gelato et kiosques itinérants pour une touche d'originalité.</p>
+                    <span class="service-link">Découvrir</span>
                 </a>
-
-                <!-- Service 3 : Mariages -->
-                <a href="mariages-evenements-prives.html" class="service-card animate-on-scroll">
-                    <span class="service-icon">💍</span>
-                    <h3>Mariages &amp; Privés</h3>
-                    <p>Bar à gelato, foodtruck, jeux rétro pour votre mariage ou événement privé. Créez des souvenirs uniques.</p>
-                    <span class="service-link">En savoir plus</span>
-                </a>
-
-                <!-- Service 4 : Location Jeux -->
-                <a href="location-jeux.html" class="service-card animate-on-scroll">
-                    <span class="service-icon">🎯</span>
-                    <h3>Location Jeux de Loisirs</h3>
-                    <p>Fléchettes, flippers, machine coup de poing, babyfoot. Animation garantie pour tous vos événements.</p>
-                    <span class="service-link">En savoir plus</span>
+                <a href="location-jeux.html" class="formule-card animate-on-scroll">
+                    <div class="formule-image">
+                        <img src="images/formules/jeux-loisirs.webp" alt="Flipper James Bond location jeux de loisirs DiPeppo" width="800" height="1308" loading="lazy">
+                    </div>
+                    <h3>Jeux de Loisirs</h3>
+                    <p>Fléchettes, flippers, babyfoot, machine à peluches : animez vos événements !</p>
+                    <span class="service-link">Découvrir</span>
                 </a>
             </div>
         </div>
@@ -1593,13 +1598,13 @@
     <section class="section gourmandises-section" id="gourmandises">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <h2>Nos Gourmandises</h2>
+                <h2>Nos Produits</h2>
                 <div class="accent-line"></div>
                 <p>Une carte complète de produits artisanaux pour régaler tous vos convives</p>
             </div>
             <div class="gourmandises-grid">
                 <div class="gourmandise-col animate-on-scroll">
-                    <h3>🍨 Produits Gelato</h3>
+                    <h3>🍨 Gelato</h3>
                     <ul>
                         <li>Glaces Italiennes</li>
                         <li>Gelato Fresco</li>
@@ -1609,7 +1614,7 @@
                     </ul>
                 </div>
                 <div class="gourmandise-col animate-on-scroll">
-                    <h3>🧁 Produits Sucrés</h3>
+                    <h3>🧁 Sucrés</h3>
                     <ul>
                         <li>Crêpes</li>
                         <li>Gaufres</li>
@@ -1618,7 +1623,7 @@
                     </ul>
                 </div>
                 <div class="gourmandise-col animate-on-scroll">
-                    <h3>🥖 Produits Salés</h3>
+                    <h3>🥖 Salés</h3>
                     <ul>
                         <li>Focaccia</li>
                         <li>Galettes</li>
@@ -1628,7 +1633,7 @@
                     </ul>
                 </div>
                 <div class="gourmandise-col animate-on-scroll">
-                    <h3>🎯 Produits Loisirs</h3>
+                    <h3>🎯 Loisirs</h3>
                     <ul>
                         <li>Machines Peluches</li>
                         <li>Fléchettes</li>
@@ -1803,46 +1808,45 @@
         </div>
     </section>
 
-    <!-- ========== FORMULES DE LOCATION SECTION ========== -->
-    <section class="section formules-section" id="formules">
+    <!-- ========== SERVICES SECTION ========== -->
+    <section class="section services-section" id="services">
         <div class="container">
             <div class="section-header animate-on-scroll">
-                <h2>Nos Formules de Location</h2>
+                <h2>Nos Services</h2>
                 <div class="accent-line"></div>
-                <p>Plusieurs formats pour s'adapter à tous vos événements</p>
+                <p>Des prestations sur-mesure pour animer tous vos événements dans le Grand Ouest</p>
             </div>
-            <div class="formules-grid">
-                <a href="foodtruck.html" class="formule-card animate-on-scroll">
-                    <div class="formule-image">
-                        <img src="images/formules/foodtruck.webp" alt="Foodtruck DiPeppo gelato artisanal italien" width="800" height="891" loading="lazy">
-                    </div>
-                    <h3>Foodtrucks</h3>
-                    <p>Notre flotte de foodtrucks pour les grands événements et festivals.</p>
-                    <span class="service-link">Découvrir</span>
+            <div class="services-grid">
+                <!-- Service 1 : Événementiel -->
+                <a href="evenementiel.html" class="service-card animate-on-scroll">
+                    <span class="service-icon">🎪</span>
+                    <h3>Événementiel &amp; Festivals</h3>
+                    <p>Animations complètes pour festivals, fêtes communales et événements d'entreprise. Foodtruck, glaces, jeux de loisirs.</p>
+                    <span class="service-link">En savoir plus</span>
                 </a>
-                <a href="evenementiel.html" class="formule-card animate-on-scroll">
-                    <div class="formule-image">
-                        <img src="images/formules/barnum.webp" alt="Barnum italien spécialités italiennes marchés et foires" width="800" height="906" loading="lazy">
-                    </div>
-                    <h3>Barnums</h3>
-                    <p>Stands et barnums aux couleurs italiennes pour marchés et foires.</p>
-                    <span class="service-link">Découvrir</span>
+
+                <!-- Service 2 : Foodtruck -->
+                <a href="foodtruck.html" class="service-card animate-on-scroll">
+                    <span class="service-icon">🍕</span>
+                    <h3>Foodtruck Gelato e Focaccia</h3>
+                    <p>Notre foodtruck parcourt le Grand Ouest : gelato artisanal, focaccia, crêpes, gaufres, churros et spécialités italiennes salées.</p>
+                    <span class="service-link">En savoir plus</span>
                 </a>
-                <a href="evenementiel.html" class="formule-card animate-on-scroll">
-                    <div class="formule-image">
-                        <img src="images/formules/chariot-mobile.webp" alt="Chariot mobile gelato DiPeppo FRESCO service événementiel" width="800" height="800" loading="lazy">
-                    </div>
-                    <h3>Chariots Mobiles</h3>
-                    <p>Chariots gelato et kiosques itinérants pour une touche d'originalité.</p>
-                    <span class="service-link">Découvrir</span>
+
+                <!-- Service 3 : Mariages -->
+                <a href="mariages-evenements-prives.html" class="service-card animate-on-scroll">
+                    <span class="service-icon">💍</span>
+                    <h3>Mariages &amp; Privés</h3>
+                    <p>Bar à gelato, foodtruck, jeux rétro pour votre mariage ou événement privé. Créez des souvenirs uniques.</p>
+                    <span class="service-link">En savoir plus</span>
                 </a>
-                <a href="location-jeux.html" class="formule-card animate-on-scroll">
-                    <div class="formule-image">
-                        <img src="images/formules/jeux-loisirs.webp" alt="Flipper James Bond location jeux de loisirs DiPeppo" width="800" height="1308" loading="lazy">
-                    </div>
-                    <h3>Jeux de Loisirs</h3>
-                    <p>Fléchettes, flippers, babyfoot, machine à peluches : animez vos événements !</p>
-                    <span class="service-link">Découvrir</span>
+
+                <!-- Service 4 : Location Jeux -->
+                <a href="location-jeux.html" class="service-card animate-on-scroll">
+                    <span class="service-icon">🎯</span>
+                    <h3>Location Jeux de Loisirs</h3>
+                    <p>Fléchettes, flippers, machine coup de poing, babyfoot. Animation garantie pour tous vos événements.</p>
+                    <span class="service-link">En savoir plus</span>
                 </a>
             </div>
         </div>
