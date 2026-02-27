@@ -1166,50 +1166,82 @@
             box-shadow: 0 12px 35px rgba(211, 47, 47, 0.45);
         }
 
-        /* ========== NOS GOURMANDISES SECTION ========== */
-        .gourmandises-section {
+        /* ========== NOS PRODUITS SECTION ========== */
+        .produits-section {
             background: var(--cream-dark);
         }
 
-        .gourmandises-grid {
+        .produits-subsection {
+            margin-bottom: 3rem;
+        }
+
+        .produits-subsection:last-child {
+            margin-bottom: 0;
+        }
+
+        .produits-subsection__title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .produits-grid-6 {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
 
-        .gourmandise-col {
-            background: var(--white);
-            border-radius: var(--radius-md);
-            padding: 2rem 1.5rem;
-            box-shadow: var(--shadow-soft);
-            transition: all 0.3s ease;
+        .produits-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
 
-        .gourmandise-col:hover {
-            transform: translateY(-3px);
+        .produit-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .produit-card:hover {
+            transform: translateY(-4px);
             box-shadow: var(--shadow-card);
         }
 
-        .gourmandise-col h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            font-weight: 700;
+        .produit-card__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .produit-card__icon {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background: linear-gradient(135deg, var(--cream) 0%, #FFF5E6 100%);
+        }
+
+        .produit-card__body {
+            padding: 1.25rem 1rem;
+            text-align: center;
+        }
+
+        .produit-card__name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
             color: var(--dark);
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid var(--oro);
-        }
-
-        .gourmandise-col ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .gourmandise-col li {
-            font-size: 0.9rem;
-            color: var(--gray);
-            padding: 0.35rem 0;
-            border-bottom: 1px solid var(--light-gray);
         }
 
         .gourmandise-col li:last-child {
@@ -1446,7 +1478,7 @@
                 font-size: 2.2rem;
             }
 
-            .gourmandises-grid {
+            .produits-grid-6 {
                 grid-template-columns: repeat(3, 1fr);
             }
 
@@ -1540,7 +1572,8 @@
                 font-size: 0.95rem;
             }
 
-            .gourmandises-grid {
+            .produits-grid-6,
+            .produits-grid-3 {
                 grid-template-columns: repeat(2, 1fr);
             }
 
@@ -1588,6 +1621,110 @@
         </div>
     </section>
 
+    <!-- ========== NOS PRODUITS SECTION ========== -->
+    <section class="section produits-section" id="produits">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Nos Produits</h2>
+                <div class="accent-line"></div>
+                <p>Une carte complète de produits artisanaux pour régaler tous vos convives</p>
+            </div>
+
+            <!-- Nos Offres Sucrées -->
+            <div class="produits-subsection">
+                <h3 class="produits-subsection__title">🍨 Nos Offres Sucrées</h3>
+                <div class="produits-grid-6">
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/gelato/glace-vanille.webp" alt="Glaces Italiennes DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Glaces Italiennes</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/gelato/glace-boule.webp" alt="Gelato Fresco d'Italie DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Gelato Fresco d'Italie</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/granites/granites.webp" alt="Granito Fruits DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Granito Fruits</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/granites/granites-alcool.webp" alt="Granito Alcoolisés DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Granito Alcoolisés</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/gelato/sundae-acai.webp" alt="Sundae Açaï DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Sundae Açaï</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/cuisson/crepe-gaufre.webp" alt="Crêpes et Gaufres DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Crêpes et Gaufres</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nos Offres Salées -->
+            <div class="produits-subsection">
+                <h3 class="produits-subsection__title">🥖 Nos Offres Salées</h3>
+                <div class="produits-grid-3">
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/cuisson/focaccia-panito.webp" alt="Focaccia et Panitos DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Focaccia et Panitos</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/cuisson/kebab.webp" alt="Kebab Breton DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Kebab Breton</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <img src="images/cuisson/galette.webp" alt="Galettes DiPeppo" class="produit-card__img" width="400" height="200" loading="lazy">
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Galettes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nos Offres Loisirs -->
+            <div class="produits-subsection">
+                <h3 class="produits-subsection__title">🎯 Nos Offres Loisirs</h3>
+                <div class="produits-grid-3">
+                    <div class="produit-card animate-on-scroll">
+                        <div class="produit-card__icon">🎯</div>
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Fléchettes</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <div class="produit-card__icon">🧸</div>
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Machines Peluches</div>
+                        </div>
+                    </div>
+                    <div class="produit-card animate-on-scroll">
+                        <div class="produit-card__icon">⚽</div>
+                        <div class="produit-card__body">
+                            <div class="produit-card__name">Babyfoot</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ========== FORMULES DE LOCATION SECTION (en haut) ========== -->
     <section class="section formules-section" id="formules">
         <div class="container">
@@ -1625,66 +1762,6 @@
         </div>
     </section>
 
-    <!-- ========== NOS GOURMANDISES SECTION ========== -->
-    <section class="section gourmandises-section" id="gourmandises">
-        <div class="container">
-            <div class="section-header animate-on-scroll">
-                <h2>Nos Produits</h2>
-                <div class="accent-line"></div>
-                <p>Une carte complète de produits artisanaux pour régaler tous vos convives</p>
-            </div>
-            <div class="gourmandises-grid">
-                <div class="gourmandise-col animate-on-scroll">
-                    <h3>🍨 Gelato</h3>
-                    <ul>
-                        <li>Glaces Italiennes</li>
-                        <li>Gelato Fresco</li>
-                        <li>Glaces Sundae</li>
-                        <li>Bubble Tea</li>
-                        <li>Granitas Fruits/Alcool</li>
-                    </ul>
-                </div>
-                <div class="gourmandise-col animate-on-scroll">
-                    <h3>🧁 Sucrés</h3>
-                    <ul>
-                        <li>Crêpes</li>
-                        <li>Gaufres</li>
-                        <li>Churros</li>
-                        <li>Panitos Sucrés</li>
-                    </ul>
-                </div>
-                <div class="gourmandise-col animate-on-scroll">
-                    <h3>🥖 Salés</h3>
-                    <ul>
-                        <li>Focaccia</li>
-                        <li>Galettes</li>
-                        <li>Kebabs Bretons</li>
-                        <li>Churros Salés</li>
-                        <li>Panitos Salés</li>
-                    </ul>
-                </div>
-                <div class="gourmandise-col animate-on-scroll">
-                    <h3>🎯 Loisirs</h3>
-                    <ul>
-                        <li>Machines Peluches</li>
-                        <li>Fléchettes</li>
-                        <li>Babyfoots</li>
-                        <li>Flippers</li>
-                    </ul>
-                </div>
-                <div class="gourmandise-col animate-on-scroll">
-                    <h3>🎨 Décorations</h3>
-                    <ul>
-                        <li>Buggy Déco</li>
-                        <li>Moto Déco</li>
-                        <li>Vélo Déco</li>
-                        <li>Scooter Déco</li>
-                        <li>PLV Décorations</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ========== GELATO TEASER SECTION ========== -->
     <section class="section gelato-teaser" id="gelato">
